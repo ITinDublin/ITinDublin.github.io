@@ -12,21 +12,42 @@ TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = 'pt'
 
-# Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-FEED_ALL_RSS = None
+ARTICLE_URL = 'blog/{slug}'
+ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
+
+PAGE_URL = '{slug}'
+PAGE_SAVE_AS = '{slug}.html'
+
+CATEGORIES_URL = 'blog/categorias'
+CATEGORIES_SAVE_AS = 'blog/categorias/index.html'
+CATEGORY_URL = 'blog/categorias/{slug}'
+CATEGORY_SAVE_AS = 'blog/categorias/{slug}/index.html'
+
+TAG_URL = 'blog/tags/{slug}'
+TAG_SAVE_AS = 'blog/tags/{slug}/index.html'
+TAGS_URL = 'blog/tags'
+TAGS_SAVE_AS = 'blog/tags/index.html'
+
+AUTHOR_URL = 'blog/autores/{slug}'
+AUTHOR_SAVE_AS = 'blog/autores/{slug}/index.html'
+AUTHORS_URL = 'blog/autores'
+AUTHORS_SAVE_AS = 'blog/autores/index.html'
+
+INDEX_SAVE_AS = "index.html"
+
+PAGINATION_PATTERNS = (
+    (1, '{base_name}/', '{base_name}/index.html'),
+    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
+)
+
 TRANSLATION_FEED_ATOM = None
 TRANSLATION_FEED_RSS = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 CATEGORY_FEED_ATOM = None
 CATEGORY_FEED_RSS = None
-
-ARTICLE_SAVE_AS = ''
-CATEGORIES_SAVE_AS = ''
-AUTHORS_SAVE_AS = ''
-TAGS_SAVE_AS = ''
-ARCHIVES_SAVE_AS = ''
+FEED_ALL_ATOM = None
+FEED_ALL_RSS = None
 
 # Navbar Links da Home Page
 NAVBAR_HOME_LINKS = [
@@ -90,7 +111,7 @@ NAVBAR_HOME_LINKS = [
         'children': [
             {
                 'title': 'Contribuição',
-                'href': 'contribuicao',
+                'href': 'contribua',
             },
         ]
     },

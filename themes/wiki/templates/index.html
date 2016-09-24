@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block aditional_styles %}
+  <link href="{{ SITEURL }}/theme/itindublin/css/index.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <div class="page-description-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          {% for item in NAVBAR_HOME_LINKS %}
+            <a href="{{ SITEURL }}/{{ item.children.0.href }}" class="page-description-link">
+              <div class="page-description">
+                <h1 class="page-description-title">{{ item.title }} <i class="fa fa-angle-double-right"></i></h1>
+
+                <div class="page-description-text">
+                  {{ item.desc }}
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
