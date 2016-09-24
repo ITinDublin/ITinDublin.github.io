@@ -18,6 +18,7 @@ script:
 - make html
 deploy:
   provider: script
+  script: make travis
   on:
     branch: master
     condition: $TRAVIS_PULL_REQUEST = false
