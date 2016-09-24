@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>IT in Dublin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ SITEURL }}/theme/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ SITEURL }}/theme/itindublin/css/base.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/itindublin/css/index.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">IT IN DUBLIN</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  {% for link in NAVBAR_HOME_LINKS %}
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        {{ link.title }} <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        {% for sublink in link.children %}
+                          <li><a href="{{ SITEURL  }}/{{ sublink.href }}">{{ sublink.title }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </li>
+                  {% endfor %}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Full Width Image Header -->
+    <header class="header-image">
+        <div class="headline">
+            <div class="container">
+                <h1>IT in Dublin</h1>
+                <p>
+                    Seja bem-vindo à wiki da comunidade brasileira de profissionais de IT na Irlanda.
+                </p>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <div class="page-description-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              teste
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-lg-4">
+            <h3>Sobre</h3>
+            <p>
+                Esta é uma iniciativa coletiva com o intuito de compartilhar conhecimento e experiências sobre a área e o mercado.<br>
+                Se você trabalha (ou já trabalhou) com TI na Irlanda, provavelmente tem algo a acrescentar.</p>
+            </p>
+          </div>
+
+          <div class="col-xs-12 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-4">
+            <h3>Social</h3>
+
+            <ul>
+              {% for social in SOCIAL_LINKS %}
+                <li><a href="{{ social.href }}"><icon class="fa {{ social.icon }}"></icon> {{ social.text }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{{ SITEURL }}/theme/itindublin/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ SITEURL }}/theme/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
