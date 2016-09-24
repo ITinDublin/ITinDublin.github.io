@@ -18,7 +18,6 @@ script:
 - make html
 deploy:
   provider: script
-  script: make travis ping
   on:
     branch: master
     condition: $TRAVIS_PULL_REQUEST = false
