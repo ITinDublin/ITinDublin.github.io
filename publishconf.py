@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'https://lffsantos.github.io/itindublin.github.io'
+SITEURL = '/'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'blog/feeds.atom'
@@ -20,5 +20,7 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = ""
+DISQUS_SITENAME = 'itindublin'
+DISQUS_NO_ID = True
+
 #GOOGLE_ANALYTICS = ""

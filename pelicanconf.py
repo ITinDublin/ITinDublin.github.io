@@ -26,8 +26,8 @@ MALT_BASE_COLOR = 'black'
 SITE_LOGO = ''
 SITE_LOGO_MOBILE = ''
 
-# STATIC_PATHS = ['images', 'extra/CNAME']
-# EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+# STATIC_PATHS = ['wiki_pages']
+# EXTRA_PATH_METADATA = {'wiki': {},}
 
 WELCOME_TITLE = 'Seja bem vindo ao {}!'.format(SITENAME)
 WELCOME_TEXT = 'Grupo Profissionais e Estudantes Brasileiros de IT em Dublin'
@@ -82,6 +82,7 @@ PLUGINS = [
     'sitemap',
 ]
 
+GOOGLE_GROUPS_MAIL_LIST_NAME = 'it-irlanda-br'
 RESPONSIVE_IMAGES = True
 PYGMENTS_STYLE = "perldoc"
 SITEMAP = {
@@ -117,9 +118,43 @@ NAVBAR_HOME_LINKS = [
         "title": "Blog",
         "href": "blog",
     },
+    {
+        "title": "Wiki",
+        "href": "wiki",
+    },
+    {
+        'title': 'Participe',
+        'href': '#',
+        'desc': 'Encontre e participe da comunidade e compartilhe suas dúvidas e idéias.',
+        'children': [
+            {
+                'title': 'Lista de Discussões',
+                'href': 'lista-de-discussoes',
+            },
+            {
+                'title': 'Eventos',
+                'href': 'eventos',
+            },
+        ]
+    },
+    {
+        'title': 'Contribua',
+        'href': '#',
+        'desc': 'Veja como contribuir e ajudar a comunidade crescer.',
+        'children': [
+            {
+                'title': 'Contribuir com a Wiki',
+                'href': 'como-contribuir-com-a-wiki',
+            },
+            {
+                'title': 'Contribuir com o Blog',
+                'href': 'como-publicar-um-artigo',
+            },
+        ]
+    },
 ]
 
-NAVBAR_BLOG_LINKS = NAVBAR_HOME_LINKS + [
+NAVBAR_BLOG_LINKS = NAVBAR_HOME_LINKS[0:4] + [
     {
         "title": "Categorias",
         "href": "blog/categorias",

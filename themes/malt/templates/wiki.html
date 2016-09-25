@@ -28,7 +28,13 @@
                     <h1 style="padding: 0px 50px">{{ page.title }}</h1>
                 {% endblock %}
                 <div class="article-contents">
-                {{ page.content }}
+                {% for link, titulo in GET_WIKI_PAGES() %}
+                    <ul style="line-height: 1em !important;">
+                        <li>
+                            <a href="{{ SITEURL }}/{{ link }}"> {{ titulo }}</a>
+                        </li>
+                    </ul>
+                {% endfor %}
                 </div>
             </div>
         </div>

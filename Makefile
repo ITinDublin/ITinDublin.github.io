@@ -72,4 +72,8 @@ travis: publish
 	ghp-import -m "Updated ItInDublin site." -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push -fq origin $(GITHUB_PAGES_BRANCH) > /dev/null
 
+#ping:
+#	curl -Is http://www.google.com/webmasters/tools/ping?sitemap=http://lffsantos.github.io/itindublin.github.io/sitemap.xml | grep "200 OK" || echo "Erro pinging Google"
+#	curl -Is http://www.bing.com/webmaster/ping.aspx?siteMap=http://lffsantos.github.io/itindublin.github.io/sitemap.xml | grep "200 OK" || echo "Erro pinging Bing"
+
 .PHONY: html help clean regenerate serve devserver publish github
