@@ -13,6 +13,8 @@ from pelicanconf import *
 SITEURL = 'https://lffsantos.github.io/itindublin.github.io'
 RELATIVE_URLS = False
 
+FEED_ALL_ATOM = 'blog/feeds.atom'
+FEED_ALL_RSS = 'blog/feeds.rss'
 
 DELETE_OUTPUT_DIRECTORY = True
 
