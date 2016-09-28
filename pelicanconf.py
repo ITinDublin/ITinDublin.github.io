@@ -83,8 +83,6 @@ PLUGINS = [
     'tipue_search',
 ]
 
-DIRECT_TEMPLATES = (('search'))
-
 GOOGLE_GROUPS_MAIL_LIST_NAME = 'it-irlanda-br'
 RESPONSIVE_IMAGES = True
 PYGMENTS_STYLE = "perldoc"
