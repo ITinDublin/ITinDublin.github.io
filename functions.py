@@ -12,7 +12,7 @@ def GET_WIKI_PAGES():
     content = 'content/pages/wiki'
     wiki_pages = []
     for page in os.listdir(content):
-        ler_arquivo = open(content+'/'+page, 'r')
+        ler_arquivo = open(content+'/'+page, 'r', encoding='utf-8')
         titulo = ler_arquivo.readline()
         extensao = page.split(".")[1]
         url = page.split(".")[0]
