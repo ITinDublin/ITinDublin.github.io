@@ -21,7 +21,8 @@ Se vc nao tem conhecimento de git ou github apenas crie um issue você precisa a
 
 ##Criando uma Página na wiki
 
-Para criar uma página na wiki, você pode olhar o exemplo de uma página no diretório _``pages/``_.
+Para criar uma página na wiki, você pode olhar o exemplo de uma página no diretório `_pages/wiki_`.  
+O seu arquivo deve ser criado nessa pasta.  
 O Pelican suporta a linguagem de marcação ReStructured Text e Markdown . 
 
 Uma página tem que ter obrigatóriamente um cabeçalho fixo, conforme abaixo (em ReST):
@@ -40,7 +41,14 @@ Após esse cabeçalho você pode escrever de acordo com a linguagem de marcaçã
 
 **Importante**  
 
-- O nome do arquivo deve conter a inicial _`wiki_`_ antes do título da página em caixa baixa separada por `-`  
-> exemplo:   _`wiki_titulo_da_sua_pagina`_
- 
- 
+- Por padronização o nome do arquivo deve ser o título da página em caixa baixa separada por `-`  
+  ex: _titulo-da-pagina_   
+
+  
+Caso tenha dificuldades para escrever Markdown ou reStructuredText, veja esses editores online que auxiliam sua escrita:
+
+ - StackEdit  
+ - Dillinger  
+ - Prose
+
+  
