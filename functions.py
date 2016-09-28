@@ -9,18 +9,17 @@ import random
 
 
 def GET_WIKI_PAGES():
-    content = 'content/pages'
+    content = 'content/pages/wiki'
     wiki_pages = []
     for page in os.listdir(content):
-        if page.startswith('wiki_'):
-            ler_arquivo = open(content+'/'+page, 'r')
-            titulo = ler_arquivo.readline()
-            extensao = page.split(".")[1]
-            url = page.split(".")[0].replace("wiki_", "")
-            if extensao == 'md':
-                titulo = titulo.replace("Title:", " ").strip()
-            ler_arquivo.close()
-            wiki_pages.append((url, titulo))
+        ler_arquivo = open(content+'/'+page, 'r')
+        titulo = ler_arquivo.readline()
+        extensao = page.split(".")[1]
+        url = page.split(".")[0]
+        if extensao == 'md':
+            titulo = titulo.replace("Title:", " ").strip()
+        ler_arquivo.close()
+        wiki_pages.append((url, titulo))
 
     return wiki_pages
 
@@ -73,12 +72,3 @@ def GET_LINK(link):
         return link
     else:
         return '/' + link
-
-# if __name__ == '__main__':
-#     # ARTICLE_BANNERS_FOLDER = 'images/banners'
-#     # root = 'images/banners'
-#
-#     print(wiki_pages)
-#     # base = os.path.join('content', root)
-#     # banners = map(functools.partial(os.path.join, root), os.walk(base).next()[2])
-#     # print(base)
