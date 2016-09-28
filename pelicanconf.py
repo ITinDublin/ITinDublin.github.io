@@ -80,7 +80,10 @@ PLUGIN_PATHS = ['./.plugins']
 PLUGINS = [
     'better_figures_and_images',
     'sitemap',
+    'tipue_search',
 ]
+
+DIRECT_TEMPLATES = (('search'))
 
 GOOGLE_GROUPS_MAIL_LIST_NAME = 'it-irlanda-br'
 RESPONSIVE_IMAGES = True
