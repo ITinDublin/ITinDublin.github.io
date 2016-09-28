@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:og="http://ogp.me/ns#"
+    xmlns:fb="https://www.facebook.com/2008/fbml"
+    itemscope itemtype="http://schema.org/Blog"
+    lang="pt">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <meta http-equiv="content-language" content="pt-br">
+        <meta name="robots" content="index, follow">
+        <meta name="description" content="Esta é uma iniciativa coletiva com o intuito de compartilhar
+                      conhecimento e experiências sobre a área e o mercado.
+                      Se você trabalha (ou já trabalhou) com TI na Irlanda,
+                      provavelmente tem algo a acrescentar."/>
+        <meta name="keywords" content="itindublin, brasil, informacao, tecnologia"/>
+        <meta name="author" content="ItInDublinBR">
+        <meta name="generator" content="Feito com Materialize, Pelican,
+        Python e VIM. ">
+        <meta name="theme-color" content="black"/>
+        <title>Dúvidas sobre visto | IT In Dublin - BR</title>
+
+        <!-- Feeds -->
+            <link href="/blog/feeds.atom" type="application/atom+xml" rel="alternate" title="IT In Dublin - BR ATOM Feed"/>
+            <link href="/blog/feeds.rss" type="application/rss+xml" rel="alternate" title="IT In Dublin - BR RSS Feed"/>
+
+        <!-- CSS  -->
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+        <link href="/theme/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="/theme/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="/theme/css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="/theme/css/pygments/perldoc.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <link href="/theme/css/article.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+        <style type="text/css">
+          .hero {
+            height: 600px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url('/images/banners/ireland_capa_c.jpg'); repeat scroll 0 0;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            overflow: hidden;
+          }
+        </style>
+        <!-- Metadata -->
+        <meta property="og:type" content="website"/>
+
+    </head>
+
+    <body class="black lighten-5">
+        <header>
+            <!-- Navigation -->
+<link href="/theme/css/nav_bar.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<div class="navbar-fixed">
+    <nav class="black role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a id="logo-container" href="/" class="brand-logo">
+                    IT In Dublin - BR
+                </a>
+                <ul class="right hide-on-med-and-down">
+                        <li ><a href="/comunidade">Comunidade</a></li>
+                        <li ><a href="/membros">Membros</a></li>
+                        <li ><a href="/blog">Blog</a></li>
+                        <li ><a href="/wiki">Wiki</a></li>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Participe <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown5' class='dropdown-content1'>
+                          <li><a href="/lista-de-discussoes">Lista de Discussões</a></li>
+                          <li><a href="/eventos">Eventos</a></li>
+                      </ul>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown6' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Contribua <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown6' class='dropdown-content1'>
+                          <li><a href="/como-contribuir-com-a-wiki">Contribuir com a Wiki</a></li>
+                          <li><a href="/como-publicar-um-artigo">Contribuir com o Blog</a></li>
+                      </ul>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <li class="black lighten-1" id="nav-mobile-header">
+                        <div class="row center">
+                            <div class="col s12" id="nav-mobile-header-img">
+                                <a href="/" alt="IT In Dublin - BR" title="IT In Dublin - BR">
+                                    <img class="circle responsive-img valign z-depth-1" alt="IT In Dublin - BR Logo" title="IT In Dublin - BR" src="/">
+                                </a>
+                            </div>
+                            <div class="col s12" id="nav-mobile-header-text">
+                                <span class="black-text text-lighten-5">IT In Dublin - BR</span>
+                            </div>
+                        </div>
+                    </li>
+                        <li ><a href="/comunidade">Comunidade</a></li>
+                        <li ><a href="/membros">Membros</a></li>
+                        <li ><a href="/blog">Blog</a></li>
+                        <li ><a href="/wiki">Wiki</a></li>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Participe <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown_m5' class='dropdown-content1'>
+                          <li><a href="/lista-de-discussoes">Lista de Discussões</a></li>
+                          <li><a href="/eventos">Eventos</a></li>
+                      </ul>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m6' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Contribua <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown_m6' class='dropdown-content1'>
+                          <li><a href="/como-contribuir-com-a-wiki">Contribuir com a Wiki</a></li>
+                          <li><a href="/como-publicar-um-artigo">Contribuir com o Blog</a></li>
+                      </ul>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </div>
+    </nav>
+</div>
+            <!-- Banner -->
+        </header>
+        <main>
+            <!-- Content -->
+  <div class="container">
+
+    <div class="row">
+    <br>
+      <div class="col-xs-12">
+
+        <div class="row">
+            <div class="col s12 m12 l12 white z-depth-2 page">
+                <br>
+<ul class="breadcrumb">
+    <li>
+    <a class="grey-text text-darken-1" title="IT In Dublin - BR Home" href="/"><i class="fa fa-home grey-text text-darken-2"></i></a>
+    </li>
+        <li>
+        <a class="grey-text text-darken-1" title="wiki|escape" href="/wiki">wiki</a>
+        </li>
+        <li class="grey-text text-lighten-1">Dúvidas sobre visto</li>
+</ul>                <hr>
+                    <h1 style="padding: 0px 50px">Dúvidas sobre visto</h1>
+                <div class="article-contents">
+                <html><body><p>Duvida sobre visto de trabalho<br/>
+<a href="http://www.djei.ie">www.djei.ie</a></p>
+<hr/>
+<p>Visto de estudante? Pode trabalhar? 20 ou 40 horas?<br/>
+<a href="http://www.citizensinformation.ie/en/travel_and_recreation/travel_to_ireland/student_visas.html">http://www.citizensinformation.ie/en/travel_and_recreation/travel_to_ireland/student_visas.html</a></p></body></html>
+                </div>
+            </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+            <!-- Footer -->
+<footer class="page-footer black darken-3">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Sobre</h5>
+                <p class="grey-text text-lighten-4">
+                Esta é uma iniciativa coletiva com o intuito de compartilhar
+                  conhecimento e experiências sobre a área e o mercado.
+                  Se você trabalha (ou já trabalhou) com TI na Irlanda,
+                  provavelmente tem algo a acrescentar.
+                </p>
+
+
+            </div>
+            <div class="col l3 offset-l3 s12">
+                <h5 class="white-text">Social</h5>
+                <ul class="social-links">
+                    <li>
+                        <a class="white-text" href="http://itindublin.slack.com/messages/general" title="Slack">
+                            <i class="fa fa-slack"></i> Slack
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://github.com/ITinDublin" title="GitHub">
+                            <i class="fa fa-github"></i> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://www.facebook.com/groups/ITinDublin/" title="Facebook">
+                            <i class="fa fa-facebook"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://groups.google.com/forum/#!forum/it-irlanda-br" title="Mailing List">
+                            <i class="fa fa-envelope"></i> Mailing List
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright black darken-4">
+        <div class="container">
+            Feito com 
+            <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>,
+            <a class="orange-text text-lighten-3" href="https://github.com/getpelican/pelican">Pelican</a>,
+            <a class="orange-text text-lighten-3" href="https://python.org/">Python</a> e
+            <a class="orange-text text-lighten-3" href="http://vim.org">VIM</a>.
+        </div>
+    </div>
+</footer>
+            <!-- Scripts -->
+            <script src="/theme/js/jquery-2.1.1.min.js"></script>
+            <script src="/theme/js/materialize.min.js"></script>
+            <script src="/theme/js/parallax.js"></script>
+            <script src="/theme/js/init.js"></script>
+        </main>
+    </body>
+</html>
