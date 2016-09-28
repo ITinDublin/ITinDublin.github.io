@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ SITENAME }}{% endblock %}
+{% block banner %}
+{% endblock %}
+{% block navbar %}
+    {% include "includes/navbar-home.html" %}
+{% endblock %}
+{% block styles %}
+    {{ super() }}
+    <link href="{{ SITEURL }}/theme/css/article.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ SITEURL }}/theme/css/wiki.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css">
+{% endblock %}
+{% block content %}
+
+  <div class="container">
+    {% block pre_content %}{% endblock %}
+
+    <div class="row">
+    <br>
+      <div class="col-xs-12">
+       {% set BREADCRUMB_ELEMENTS = [("wiki", "wiki"),(page.title, None)] %}
+
+        <div class="row">
+            <div class="col s12 m12 l12 white z-depth-2 page">
+                <br>
+                {% include "includes/breadcrumbs.html" %}
+
+                <div align="center">
+                    <input type="text" size="60" id="tipue_search_input">
+                    <input type="button" id="tipue_search_button" value="Search" disabled>
+                </div>
+                <div id="tipue_search_content"></div>
+                <hr>
+
+                {% block page_title %}
+                    <h1 style="padding: 0px 50px">{{ page.title }}</h1>
+                {% endblock %}
+                <div class="article-contents">
+                {% for link, titulo in GET_WIKI_PAGES() %}
+                    <ul style="line-height: 1em !important;">
+                        <li>
+                            <a href="{{ SITEURL }}/{{ link }}"> {{ titulo }}</a>
+                        </li>
+                    </ul>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    {% block post_content %}{% endblock %}
+  </div>
+{% endblock %}
+{% block scripts %}
+  {{ super() }}
+    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+         $('#tipue_search_input').tipuesearch({
+             'show': 10,
+             'mode': 'json',
+             'contentLocation': '{{ SITEURL }}/tipuesearch_content.json'
+         });
+    });
+    </script>
+{% endblock %}

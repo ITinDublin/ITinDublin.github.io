@@ -1,0 +1,33 @@
+main {
+  color: #444444;
+  padding: 20px 0;
+}
+
+main h1, main h2, main h3, main h4 {
+  color: #666666;
+}
+
+main h1 {
+    font-size: 36px;
+}
+
+main h2 {
+    font-size: 30px;
+}
+main h3 {
+    font-size: 24px;
+}
+main h4 {
+    font-size: 18px;
+}
+main h5 {
+    font-size: 14px;
+}
+main h6 {
+    font-size: 12px;
+}
+
+.breadcrumb {
+    background-color: #f5f5f5;
+}
+
