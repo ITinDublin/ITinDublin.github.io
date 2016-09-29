@@ -172,7 +172,7 @@ NAVBAR_BLOG_LINKS = NAVBAR_HOME_LINKS[0:4] + [
 
 SOCIAL_LINKS = (
     {
-        "href": "http://itindublin.slack.com/messages/general",
+        "href": "https://itindublin.herokuapp.com/",
         "icon": "fa-slack",
         "text": "Slack",
     },
