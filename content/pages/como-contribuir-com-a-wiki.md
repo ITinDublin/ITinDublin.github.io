@@ -6,7 +6,7 @@ Pensando na possibilidade de mantermos um site para a comunidade de maneira mais
 Este projeto utiliza [Pelican](http://blog.getpelican.com/) como gerador de páginas estáticas e [Travis-CI](https://travis-ci.org/) para realizar a integração contínua.
 
 
-Repo: https://github.com/itindublin/itindublin.github.io
+Repo: [https://github.com/itindublin/itindublin.github.io](https://github.com/itindublin/itindublin.github.io)
 
 
 ##Vantagens
@@ -21,7 +21,7 @@ Se vc nao tem conhecimento de git ou github apenas crie um issue você precisa a
 
 ##Criando uma Página na wiki
 
-Para criar uma página na wiki, você pode olhar o exemplo de uma página no diretório `_pages/wiki_`.  
+Para criar uma página na wiki, você pode olhar o exemplo de uma página no diretório `_content/pages/wiki_`.  
 O seu arquivo deve ser criado nessa pasta.  
 O Pelican suporta a linguagem de marcação ReStructured Text e Markdown . 
 
@@ -47,8 +47,8 @@ Após esse cabeçalho você pode escrever de acordo com a linguagem de marcaçã
   
 Caso tenha dificuldades para escrever Markdown ou reStructuredText, veja esses editores online que auxiliam sua escrita:
 
- - StackEdit  
- - Dillinger  
- - Prose
+ - [StackEdit](https://stackedit-beta.herokuapp.com)  
+ - [Dillinger](http://dillinger.io/)  
+ - [Prose](http://prose.io/)
 
   
