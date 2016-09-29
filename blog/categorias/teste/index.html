@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
     xmlns:og="http://ogp.me/ns#"
@@ -18,21 +19,24 @@
         <meta name="generator" content="Feito com Materialize, Pelican,
         Python e VIM. ">
         <meta name="theme-color" content="black"/>
-        <title>Tags | IT In Dublin - BR</title>
+        <title>Artigos na Categoria 'Teste' | IT In Dublin - BR
+</title>
 
         <!-- Feeds -->
             <link href="/blog/feeds.atom" type="application/atom+xml" rel="alternate" title="IT In Dublin - BR ATOM Feed"/>
             <link href="/blog/feeds.rss" type="application/rss+xml" rel="alternate" title="IT In Dublin - BR RSS Feed"/>
 
         <!-- CSS  -->
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
         <link href="/theme/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="/theme/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="/theme/css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="/theme/css/pygments/perldoc.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-    <link href="/theme/css/tags.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/theme/css/index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <link href="/theme/css/tag-category-author-index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
         <style type="text/css">
           .hero {
@@ -70,7 +74,7 @@
                     <li ><a href="/wiki">Wiki</a></li>
                     <li ><a href="/blog/categorias">Categorias</a></li>
                     <li ><a href="/blog/autores">Autores</a></li>
-                    <li class="active"><a href="/blog/tags">Tags</a></li>
+                    <li ><a href="/blog/tags">Tags</a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav">
@@ -92,7 +96,7 @@
                     <li ><a href="/wiki">Wiki</a></li>
                     <li ><a href="/blog/categorias">Categorias</a></li>
                     <li ><a href="/blog/autores">Autores</a></li>
-                    <li class="active"><a href="/blog/tags">Tags</a></li>
+                    <li ><a href="/blog/tags">Tags</a></li>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
@@ -104,7 +108,7 @@
                 <div class="container">
                     <div class="hero-content animated bounceInDown slow">
                         <img src="/" title="IT In Dublin - BR" alt="IT In Dublin - BR" class="logo"/>
-<h1>Tags</h1>
+<h1>Artigos na Categoria 'Teste'</h1>
                     </div>
                 </div>
             </div>
@@ -120,30 +124,48 @@
         <li>
         <a class="grey-text text-darken-1" title="IT In Dublin - BR Blog|escape" href="/blog">IT In Dublin - BR Blog</a>
         </li>
-        <li class="grey-text text-lighten-1">Tags</li>
-</ul>        <div id="tags" class="col s12 white z-depth-1">
-            <div class="row grey" id="search-bar">
-                <form id="tag-search"  onkeypress="return event.keyCode != 13;">
-                    <div class="input-field">
-                        <i class="fa fa-search fa-2x" id="search-icon"></i>
-                        <input id="search-input" type="search" required placeholder="Buscar uma tag">
+        <li>
+        <a class="grey-text text-darken-1" title="Categorias|escape" href="/blog/categorias">Categorias</a>
+        </li>
+        <li class="grey-text text-lighten-1">Teste</li>
+</ul>        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image row black-text text-lighten-5 article-header" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/')">
+                    <div class="article-header-text valign-wrapper">
+                        <div class="article-title col s12 m12 l12">
+                            <h2>
+                                <a class="black-text text-lighten-5" href="/blog/primeiro-artigo" title="Primeiro Artigo">Primeiro Artigo</a>
+                            </h2>
+                            <div class="article-metadata">
+                                <span class="article-author-name">
+                                    <a href="/blog/autores/anonimo" title="anônimo" class="black-text text-lighten-5">
+                                        <i class="fa fa-user"></i> anônimo
+                                    </a>
+                                </span>
+                                <span class="article-datetime">
+                                    <i class="fa fa-calendar"></i> <time datetime="2016-09-28T14:57:00+02:00">Wed 28 September 2016</time>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                </div>
+                <div class="card-content article-contents">
+                    <html><body><p>teste</p></body></html>
+                </div>
+                <div class="card-action">
+                    <a href="/blog/primeiro-artigo">Continuar lendo...</a>
+                </div>
             </div>
+        </div>
+        <div class="col s12" id="pagination">
+            <div id="pagination-card" class="col s12 white z-depth-1 valign-wrapper">
+                <ul class="pagination valign">
+                        <li class="disabled"><a href=""><i class="material-icons">chevron_left</i></a></li>
 
-            <div class="row" id="all-tags">
-                <span class="pill grey lighten-2">
-                    <a class="white-text" href="/blog/tags/pelican">pelican</a>
-                </span>
-                <span class="pill grey lighten-2">
-                    <a class="white-text" href="/blog/tags/site">site</a>
-                </span>
-                <span class="pill grey lighten-2">
-                    <a class="white-text" href="/blog/tags/tecnico">tecnico</a>
-                </span>
-                <span class="pill grey lighten-2">
-                    <a class="white-text" href="/blog/tags/tutorial">tutorial</a>
-                </span>
+                            <li class="active"><a href="">1</a></li>
+
+                        <li class="disabled"><a href=""><i class="material-icons">chevron_right</i></a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -202,44 +224,10 @@
     </div>
 </footer>
             <!-- Scripts -->
-                <script src="/theme/js/jquery-2.1.1.min.js"></script>
+            <script src="/theme/js/jquery-2.1.1.min.js"></script>
             <script src="/theme/js/materialize.min.js"></script>
             <script src="/theme/js/parallax.js"></script>
             <script src="/theme/js/init.js"></script>
-
-    <script type="text/javascript">
-        (function ($) {
-            // custom css expression for a case-insensitive contains()
-            jQuery.expr[':'].Contains = function(a,i,m){
-                return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
-            };
-
-            function listFilter() {
-                $('#search-input')
-                .change( function () {
-                    var filter = $(this).val();
-                    if(filter) {
-                        // this finds all links in a list that contain the input,
-                        // and hide the ones not containing the input while showing the ones that do
-                        $('#all-tags').find("a:not(:Contains(" + filter + "))").parent().hide();
-                        $('#all-tags').find("a:Contains(" + filter + ")").parent().show();
-                    } else {
-                        $('#all-tags').find("span").show();
-                    }
-                    return false;
-                })
-                .keyup( function () {
-                    // fire the above change event after every letter
-                    $(this).change();
-                });
-            }
-
-            //ondomready
-            $(function () {
-                listFilter($());
-            });
-        }(jQuery));
-    </script>
         </main>
     </body>
 </html>
