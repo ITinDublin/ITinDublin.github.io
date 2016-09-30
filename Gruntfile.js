@@ -11,6 +11,21 @@ module.exports = function(grunt) {
     serverPort: 8000
   };
 
+  //Concat ===============================
+
+  var concat
+  config.concat = concat = {};
+
+  concat.dev = {
+
+    files: {
+            "themes/malt/static/css/it-style.css": [
+            "themes/malt/static/css/*.css"
+            ]
+        }
+
+  };
+
   //Watch ===============================
   config.watch = {
     scripts: {
@@ -49,17 +64,17 @@ module.exports = function(grunt) {
 
 
   var cssmin
-    config.cssmin = {
-        target: {
-            files: [{
-                expand: true,
-                cwd: 'themes/malt/static/css',
-                src: ['*.css', '!*.min.css'],
-                dest: 'themes/malt/static/css/',
-                ext: '.min.css'
-            }]
-        }
+  config.cssmin = {
+    target: {
+      files: [{
+        expand: true,
+        cwd: 'themes/malt/static/css',
+        src: ['it-style.css'],
+        dest: 'themes/malt/static/css/',
+        ext: '.min.css'
+      }]
     }
+  }
 
 
 
@@ -75,8 +90,8 @@ module.exports = function(grunt) {
 
   //Register custom tasks ===============================
   grunt.registerTask('default', ['dev']);
-  grunt.registerTask('dev', ['sass:dev']);
-  grunt.registerTask('dist', ['sass:dist']);
+  grunt.registerTask('dev', ['concat:dev', 'sass:dev']);
+  grunt.registerTask('dist', ['concat:dev', 'sass:dist']);
   grunt.registerTask('serve', ['connect:server', 'watch']);
   require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt, {
