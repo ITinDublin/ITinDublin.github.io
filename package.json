@@ -1,0 +1,27 @@
+{
+  "name": "itindublin.github.io",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/itindublin/itindublin.github.io.svg?branch=master)](https://travis-ci.org/itindublin/itindublin.github.io)",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITinDublin/ITinDublin.github.io.git"
+  },
+  "author": "itindublin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ITinDublin/ITinDublin.github.io/issues"
+  },
+  "homepage": "https://github.com/ITinDublin/ITinDublin.github.io#readme",
+   "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*",
+    "time-grunt": "^1.3.0",
+    "load-grunt-tasks": "^3.5.0"
+  }
+}
