@@ -17,3 +17,4 @@ srv.pid
 output
 publish-key
 publish-key.pub
+node_modules

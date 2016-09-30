@@ -47,6 +47,22 @@ module.exports = function(grunt) {
     }
   };
 
+
+  var cssmin
+    config.cssmin = {
+        target: {
+            files: [{
+                expand: true,
+                cwd: 'themes/malt/static/css',
+                src: ['*.css', '!*.min.css'],
+                dest: 'themes/malt/static/css/',
+                ext: '.min.css'
+            }]
+        }
+    }
+
+
+
   //grunt serve ===============================
   config.connect = {
     server: {
