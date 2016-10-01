@@ -1,4 +1,6 @@
 Title: Dúvidas sobre visto
+Tags: dúvida, visto, trabalho, estudante
+
 
 Duvida sobre visto de trabalho  
 [www.djei.ie](http://www.djei.ie)

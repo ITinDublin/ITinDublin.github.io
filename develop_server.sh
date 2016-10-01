@@ -80,6 +80,7 @@ function start_up(){
     return 1
   fi
   echo 'Pelican and HTTP server processes now running in background.'
+  python functions.py tags_generator
 }
 
 ###

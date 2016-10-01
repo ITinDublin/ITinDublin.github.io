@@ -1,4 +1,5 @@
 Title: Regras do Grupo
+Tags: regras
 
 Algumas Regras BÁSICAS!
   

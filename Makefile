@@ -7,6 +7,7 @@ INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
+FUNCTIONS=$(BASEDIR)/functions.py
 
 GITHUB_PAGES_BRANCH=master
 
@@ -33,12 +34,14 @@ help:
 
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	python $(FUNCTIONS)	tags_generator
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
 regenerate:
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	python $(FUNCTIONS)	tags_generator
 
 serve:
 ifdef PORT
@@ -61,6 +64,7 @@ stopserver:
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	python $(FUNCTIONS)	tags_generator
 
 github: publish
 	ghp-import -m "Generate ItInDublin site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
@@ -73,7 +77,7 @@ travis: publish
 	git push -fq origin $(GITHUB_PAGES_BRANCH) > /dev/null
 
 #ping:
-#	curl -Is http://www.google.com/webmasters/tools/ping?sitemap=http://lffsantos.github.io/itindublin.github.io/sitemap.xml | grep "200 OK" || echo "Erro pinging Google"
-#	curl -Is http://www.bing.com/webmaster/ping.aspx?siteMap=http://lffsantos.github.io/itindublin.github.io/sitemap.xml | grep "200 OK" || echo "Erro pinging Bing"
+#	curl -Is http://www.google.com/webmasters/tools/ping?sitemap=http://itindublin.github.io/sitemap.xml | grep "200 OK" || echo "Erro pinging Google"
+#	curl -Is http://www.bing.com/webmaster/ping.aspx?siteMap=http://itindublin.github.io/sitemap.xml | grep "200 OK" || echo "Erro pinging Bing"
 
 .PHONY: html help clean regenerate serve devserver publish github

@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-import os
 import sys
+
+import os
+
 
 sys.path.append(os.curdir)
 
@@ -27,7 +29,12 @@ SITE_LOGO = ''
 SITE_LOGO_MOBILE = ''
 
 # STATIC_PATHS = ['wiki_pages']
-# EXTRA_PATH_METADATA = {'wiki': {},}
+# EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+
+# EXTRA_TEMPLATES_PATHS = ['malt.templates.wiki']
+# TEMPLATE_PAGES = {}
+#
+# TEMPLATE_PAGES['wiki.html'] = 'wiki/index.html'
 
 WELCOME_TITLE = 'Seja bem vindo ao {}!'.format(SITENAME)
 WELCOME_TEXT = 'Grupo Profissionais e Estudantes Brasileiros de IT em Dublin'
