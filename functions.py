@@ -108,21 +108,23 @@ def reader_wiki_files():
     que irá ser utilizado para montar a página de listagem, e as páginas para cada tag encontrada.
     :return:
     """
-    md_reader = MarkdownReader(settings.DEFAULT_CONFIG)
-    rst_reader = RstReader(settings.DEFAULT_CONFIG)
+    reader = {
+        'rst': RstReader(settings.DEFAULT_CONFIG),
+        'md': MarkdownReader(settings.DEFAULT_CONFIG),
+    }
 
-    content = 'content/pages/wiki/'
+    path_wiki = 'content/pages/wiki/'
 
     wiki_pages = []
-    for page in os.listdir(content):
-        file_name, extensao = page.split(".")
-        if extensao == 'rst':
-            metadata = rst_reader.read(content+page)[1]
-        else:
-            metadata = md_reader.read(content+page)[1]
+    for file in os.listdir(path_wiki):
+        file_name, extensao = file.split(".")
+        if extensao not in reader.keys():
+            raise Exception('Extensão do arquivo inválida')
+
+        metadata = reader[extensao].read(path_wiki+file)[1]
         tags = metadata.get('tags', [])
-        titulo = metadata.get('title')
-        wiki_pages.append((file_name, titulo, tags))
+        title = metadata.get('title')
+        wiki_pages.append((file_name, title, tags))
 
     return wiki_pages
 
