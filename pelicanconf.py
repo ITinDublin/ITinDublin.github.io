@@ -293,5 +293,13 @@ MALT_HOME = [
         ]
     },
 ]
-
 from functions import *
+
+GET_AVATAR = get_avatar
+GET_WIKI_PAGES = get_wiki_pages
+GET_ARTICLE_AT_GITHUB = get_article_at_github
+GET_ARTICLE_IMAGE = get_article_image
+GET_LINK = get_link
+GET_TAGS_WIKI = get_tags_wiki
+
+
