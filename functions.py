@@ -145,18 +145,25 @@ def get_avatar(autor, membros):
             not any([True for key in membros[autor].keys() if key in ['github', 'email', 'twitter']]):
         return "/theme/img/{}".format("default_avatar.gif")
 
-    if membros[autor].get('github'):
-        formatter = "https://avatars.githubusercontent.com/{}?size=250"
-        username = membros[autor]['github']
-    elif membros[autor].get('email'):
-        formatter = "http://www.gravatar.com/avatar/{}?s=250"
-        username = hashlib.md5(membros[autor]['email'].strip().lower().encode("utf-8")).hexdigest()
-    elif membros[autor].get('twitter'):
-        formatter = "http://avatars.io/twitter/{}"
-        username = membros[autor]['twitter']
-        username = username[1:] if username.startswith("@") else username
+    link_img = {
+        'github': "https://avatars.githubusercontent.com/{}?size=250",
+        'email': "http://www.gravatar.com/avatar/{}?s=250",
+        'twitter': "http://avatars.io/twitter/{}",
+    }
+    url_img = None
+    for account, username in membros['autor'].items():
+        url_img = link_img.get(account)
+        if url_img:
+            if account == 'email':
+                username = hashlib.md5(membros[autor]['email'].strip().lower().encode("utf-8")).hexdigest()
+            else:
+                username = username[1:] if username.startswith("@") else username
+            break
 
-    return formatter.format(username)
+    if not url_img:
+        return "/theme/img/{}".format("default_avatar.gif")
+
+    return url_img.format(username)
 
 
 def get_article_image(article, root):
