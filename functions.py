@@ -1,32 +1,37 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 import sys
-from copy import copy
-from bs4 import BeautifulSoup
 import shutil
-from collections import defaultdict
+import posixpath
+import random
 import logging
-
 import hashlib
 import functools
 import os
+
+from collections import defaultdict
+from copy import copy
+from bs4 import BeautifulSoup
 from pelican import settings
 from pelican.readers import MarkdownReader, RstReader
-import posixpath
-import random
 
 
 def tag_wiki_path(tag_index, default_path='output/wiki/tags'):
     for tag, values in tag_index.items():
-        path = copy(default_path)
-        path = os.path.join(path, "/".join([tag, 'index.html']))
+        path = os.path.join(copy(default_path), "/".join([tag, 'index.html']))
         try:
             os.makedirs(os.path.dirname(path))
-        except Exception:
+        except FileExistsError:
             pass
-        shutil.copy2('output/wiki.html', 'output/wiki/index.html')
-        shutil.copy2('output/tags-wiki.html', 'output/wiki/tags/index.html')
-        shutil.copy2('output/wiki.html', path)
+
+        path_for_cp = [
+            ('output/wiki.html', 'output/wiki/index.html'),
+            ('output/tags-wiki.html', 'output/wiki/tags/index.html'),
+            ('output/wiki.html', path)
+        ]
+        for file1, file2 in path_for_cp:
+            shutil.copy2(file1, file2)
+
         soup = BeautifulSoup(open(path), 'html.parser')
         extract_div = soup.find(id="wiki-list").extract()
         wiki_content = soup.find(id="wiki-content")
@@ -37,20 +42,16 @@ def tag_wiki_path(tag_index, default_path='output/wiki/tags'):
             copy_div.div.a['href'] = "/"+value['url']
             copy_div.find("div", {"class": "tag-wiki"}).extract()
             wiki_content.append(copy_div)
-            hr = soup.new_tag("hr")
-            wiki_content.append(hr)
+            wiki_content.append(soup.new_tag("hr"))
+
         title = "Resuldados para tag: {}".format(str(tag))
         breadcrumb = soup.find("ul", {"class": "breadcrumb"})
-        len(breadcrumb.findAll('li'))
         breadcrumb.findAll('li')[2].extract()
-        li = copy(breadcrumb.findAll('li')[1])
-        li.a.string = 'Tags'
-        li.a['href'] = "/wiki/tags"
-        breadcrumb.append(li)
-        li = copy(breadcrumb.findAll('li')[1])
-        li.a.string = title
-        li.a['href'] = "#"
-        breadcrumb.append(li)
+        for label, link in [('Tags', "/wiki/tags"), (title, '#')]:
+            li = copy(breadcrumb.findAll('li')[1])
+            li.a.string = label
+            li.a['href'] = link
+            breadcrumb.append(li)
 
         soup.title.string = title
         soup.find(id='title-wiki').string = title
