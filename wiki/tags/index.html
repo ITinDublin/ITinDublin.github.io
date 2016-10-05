@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
     xmlns:og="http://ogp.me/ns#"
@@ -19,24 +18,23 @@
         <meta name="generator" content="Feito com Materialize, Pelican,
         Python e VIM. ">
         <meta name="theme-color" content="black"/>
-        <title>Artigos na Categoria 'Teste' | IT In Dublin - BR
-</title>
+        <title>Tags Wiki | IT In Dublin - BR</title>
 
         <!-- Feeds -->
             <link href="/blog/feeds.atom" type="application/atom+xml" rel="alternate" title="IT In Dublin - BR ATOM Feed"/>
             <link href="/blog/feeds.rss" type="application/rss+xml" rel="alternate" title="IT In Dublin - BR RSS Feed"/>
 
         <!-- CSS  -->
-                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
         <link href="/theme/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="/theme/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="/theme/css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="/theme/css/pygments/perldoc.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-    <link href="/theme/css/index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-    <link href="/theme/css/tag-category-author-index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/theme/css/article.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/theme/css/wiki.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="/theme/tipuesearch/tipuesearch.css">
 
         <style type="text/css">
           .hero {
@@ -60,6 +58,7 @@
     <body class="black lighten-5">
         <header>
             <!-- Navigation -->
+<link href="/theme/css/nav_bar.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 <div class="navbar-fixed">
     <nav class="black role="navigation">
         <div class="container">
@@ -68,13 +67,24 @@
                     IT In Dublin - BR
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li ><a href="/comunidade">Comunidade</a></li>
-                    <li ><a href="/membros">Membros</a></li>
-                    <li ><a href="/blog">Blog</a></li>
-                    <li ><a href="/wiki">Wiki</a></li>
-                    <li ><a href="/blog/categorias">Categorias</a></li>
-                    <li ><a href="/blog/autores">Autores</a></li>
-                    <li ><a href="/blog/tags">Tags</a></li>
+                        <li ><a href="/comunidade">Comunidade</a></li>
+                        <li ><a href="/membros">Membros</a></li>
+                        <li ><a href="/blog">Blog</a></li>
+                        <li ><a href="/wiki">Wiki</a></li>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Participe <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown5' class='dropdown-content1'>
+                          <li><a href="/lista-de-discussoes">Lista de Discussões</a></li>
+                          <li><a href="/eventos">Eventos</a></li>
+                      </ul>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown6' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Contribua <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown6' class='dropdown-content1'>
+                          <li><a href="/como-contribuir-com-a-wiki">Contribuir com a Wiki</a></li>
+                          <li><a href="/como-publicar-um-artigo">Contribuir com o Blog</a></li>
+                      </ul>
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav">
@@ -90,13 +100,24 @@
                             </div>
                         </div>
                     </li>
-                    <li ><a href="/comunidade">Comunidade</a></li>
-                    <li ><a href="/membros">Membros</a></li>
-                    <li ><a href="/blog">Blog</a></li>
-                    <li ><a href="/wiki">Wiki</a></li>
-                    <li ><a href="/blog/categorias">Categorias</a></li>
-                    <li ><a href="/blog/autores">Autores</a></li>
-                    <li ><a href="/blog/tags">Tags</a></li>
+                        <li ><a href="/comunidade">Comunidade</a></li>
+                        <li ><a href="/membros">Membros</a></li>
+                        <li ><a href="/blog">Blog</a></li>
+                        <li ><a href="/wiki">Wiki</a></li>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Participe <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown_m5' class='dropdown-content1'>
+                          <li><a href="/lista-de-discussoes">Lista de Discussões</a></li>
+                          <li><a href="/eventos">Eventos</a></li>
+                      </ul>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m6' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Contribua <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown_m6' class='dropdown-content1'>
+                          <li><a href="/como-contribuir-com-a-wiki">Contribuir com a Wiki</a></li>
+                          <li><a href="/como-publicar-um-artigo">Contribuir com o Blog</a></li>
+                      </ul>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
@@ -104,72 +125,42 @@
     </nav>
 </div>
             <!-- Banner -->
-            <div class="hero parallax-effect">
-                <div class="container">
-                    <div class="hero-content animated bounceInDown slow">
-                        <img src="/" title="IT In Dublin - BR" alt="IT In Dublin - BR" class="logo"/>
-<h1>Artigos na Categoria 'Teste'</h1>
-                    </div>
-                </div>
-            </div>
         </header>
         <main>
             <!-- Content -->
 <div class="container content-container">
     <div class="row">
+            <div class="col s12 m12 l12 white z-depth-2 page">
+                <br>
 <ul class="breadcrumb">
     <li>
     <a class="grey-text text-darken-1" title="IT In Dublin - BR Home" href="/"><i class="fa fa-home grey-text text-darken-2"></i></a>
     </li>
         <li>
-        <a class="grey-text text-darken-1" title="IT In Dublin - BR Blog|escape" href="/blog">IT In Dublin - BR Blog</a>
+        <a class="grey-text text-darken-1" title="IT In Dublin - BR Wiki|escape" href="/wiki">IT In Dublin - BR Wiki</a>
         </li>
-        <li>
-        <a class="grey-text text-darken-1" title="Categorias|escape" href="/blog/categorias">Categorias</a>
-        </li>
-        <li class="grey-text text-lighten-1">Teste</li>
-</ul>        <div class="col s12 m6 l4">
-            <div class="card">
-                <div class="card-image row black-text text-lighten-5 article-header" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/')">
-                    <div class="article-header-text valign-wrapper">
-                        <div class="article-title col s12 m12 l12">
-                            <h2>
-                                <a class="black-text text-lighten-5" href="/blog/primeiro-artigo" title="Primeiro Artigo">Primeiro Artigo</a>
-                            </h2>
-                            <div class="article-metadata">
-                                <span class="article-author-name">
-                                    <a href="/blog/autores/anonimo" title="anônimo" class="black-text text-lighten-5">
-                                        <i class="fa fa-user"></i> anônimo
-                                    </a>
-                                </span>
-                                <span class="article-datetime">
-                                    <i class="fa fa-calendar"></i> <time datetime="2016-09-28T14:57:00+02:00">Wed 28 September 2016</time>
-                                </span>
-                            </div>
+        <li class="grey-text text-lighten-1">Tags</li>
+</ul>
+                <div align="center">
+                    <input type="text" size="60" id="tipue_search_input" placeholder="Buscar uma tag" onkeypress="return event.keyCode != 13;">
+                </div>
+
+                <div class="row" id="all-tags">
+
+                    <div class="wiki-list1" id="wiki-list">
+                        <div class="tag-wiki" style="padding: 0px 22px 20px 30px">
+                                <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/visto" title="Tag 'visto'">visto</a></span>
+                                <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/regras" title="Tag 'regras'">regras</a></span>
+                                <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/trabalho" title="Tag 'trabalho'">trabalho</a></span>
+                                <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/dúvida" title="Tag 'dúvida'">dúvida</a></span>
+                                <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/estudante" title="Tag 'estudante'">estudante</a></span>
                         </div>
                     </div>
-                </div>
-                <div class="card-content article-contents">
-                    <html><body><p>teste</p>
-</body></html>
-                </div>
-                <div class="card-action">
-                    <a href="/blog/primeiro-artigo">Continuar lendo...</a>
+                    <hr>
+
                 </div>
             </div>
         </div>
-        <div class="col s12" id="pagination">
-            <div id="pagination-card" class="col s12 white z-depth-1 valign-wrapper">
-                <ul class="pagination valign">
-                        <li class="disabled"><a href=""><i class="material-icons">chevron_left</i></a></li>
-
-                            <li class="active"><a href="">1</a></li>
-
-                        <li class="disabled"><a href=""><i class="material-icons">chevron_right</i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 </div>
 
             <!-- Footer -->
@@ -225,10 +216,44 @@
     </div>
 </footer>
             <!-- Scripts -->
-            <script src="/theme/js/jquery-2.1.1.min.js"></script>
+                <script src="/theme/js/jquery-2.1.1.min.js"></script>
             <script src="/theme/js/materialize.min.js"></script>
             <script src="/theme/js/parallax.js"></script>
             <script src="/theme/js/init.js"></script>
+
+    <script type="text/javascript">
+        (function ($) {
+            // custom css expression for a case-insensitive contains()
+            jQuery.expr[':'].Contains = function(a,i,m){
+                return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+            };
+
+            function listFilter() {
+                $('#tipue_search_input')
+                .change( function () {
+                    var filter = $(this).val();
+                    if(filter) {
+                        // this finds all links in a list that contain the input,
+                        // and hide the ones not containing the input while showing the ones that do
+                        $('#all-tags').find("a:not(:Contains(" + filter + "))").parent().hide();
+                        $('#all-tags').find("a:Contains(" + filter + ")").parent().show();
+                    } else {
+                        $('#all-tags').find("span").show();
+                    }
+                    return false;
+                })
+                .keyup( function () {
+                    // fire the above change event after every letter
+                    $(this).change();
+                });
+            }
+
+            //ondomready
+            $(function () {
+                listFilter($());
+            });
+        }(jQuery));
+    </script>
         </main>
     </body>
 </html>
