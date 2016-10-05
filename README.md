@@ -1,6 +1,6 @@
 #Grupo It in Dublin - BR
 
-[![Build Status](https://travis-ci.org/itindublin/itindublin.github.io.svg?branch=master)](https://travis-ci.org/itindublin/itindublin.github.io)
+[![Build Status](https://travis-ci.org/itindublin/itindublin.github.io.svg?branch=develop)](https://travis-ci.org/itindublin/itindublin.github.io)
 
 [![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
 [![npm version](https://badge.fury.io/js/bower.svg)](https://badge.fury.io/js/bower)

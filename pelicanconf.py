@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-import os
 import sys
+
+import os
+
 
 sys.path.append(os.curdir)
 
@@ -27,7 +29,12 @@ SITE_LOGO = ''
 SITE_LOGO_MOBILE = ''
 
 # STATIC_PATHS = ['wiki_pages']
-# EXTRA_PATH_METADATA = {'wiki': {},}
+# EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+
+# EXTRA_TEMPLATES_PATHS = ['malt.templates.wiki']
+# TEMPLATE_PAGES = {}
+#
+# TEMPLATE_PAGES['wiki.html'] = 'wiki/index.html'
 
 WELCOME_TITLE = 'Seja bem vindo ao {}!'.format(SITENAME)
 WELCOME_TEXT = 'Grupo Profissionais e Estudantes Brasileiros de IT em Dublin'
@@ -286,5 +293,13 @@ MALT_HOME = [
         ]
     },
 ]
-
 from functions import *
+
+GET_AVATAR = get_avatar
+GET_WIKI_PAGES = get_wiki_pages
+GET_ARTICLE_AT_GITHUB = get_article_at_github
+GET_ARTICLE_IMAGE = get_article_image
+GET_LINK = get_link
+GET_TAGS_WIKI = get_tags_wiki
+
+

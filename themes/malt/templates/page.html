@@ -29,6 +29,13 @@
                 {% endblock %}
                 <div class="article-contents">
                 {{ page.content }}
+                <br><br>
+                <div class="article-tags">
+                    <span class="icon"><i title="Tags" class="fa fa-tags"></i></span>
+                    {% for tag in page.tags %}
+                    <span class="pill {{ MALT_BASE_COLOR }} lighten-2"><a class="white-text" href="{{ SITEURL }}/{{ tag.url|replace("blog", "wiki") }}" title="Tag '{{ tag.name|escape }}'">{{ tag.name }}</a></span>
+                {% endfor %}
+            </div>
                 </div>
             </div>
         </div>
