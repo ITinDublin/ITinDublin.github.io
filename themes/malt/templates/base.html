@@ -56,7 +56,7 @@
         {% block seo %}
         <meta property="og:type" content="website"/>
         {% endblock %}
-
+        {% include 'google_tools.html' %}
         {% if GOOGLE_SITE_VERIFICATION %}
         <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}"/>
         {% endif %}
