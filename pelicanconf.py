@@ -302,5 +302,5 @@ GET_ARTICLE_AT_GITHUB = get_article_at_github
 GET_ARTICLE_IMAGE = get_article_image
 GET_LINK = get_link
 GET_TAGS_WIKI = get_tags_wiki
-
+GET_GROUPS_MEETUP = get_groups_meetup('content/eventos/meetups.json')
 

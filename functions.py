@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 import sys
+import json
+import glob
 import shutil
 import posixpath
 import random
@@ -187,6 +189,17 @@ def get_article_at_github(article, repo, branch):
 
 def get_link(link):
     return link if link.startswith('http://') or link.startswith('https://') else '/' + link
+
+
+def get_groups_meetup(path):
+    groups_meetup = []
+    meetups = [json.load(open(fname, 'r', encoding='utf-8')) for fname in glob.glob(path)]
+    for group in meetups:
+        nome = group['nome']
+        url = group['url']
+        groups_meetup.append(nome)
+
+    return groups_meetup
 
 
 if __name__ == '__main__':
