@@ -1,4 +1,9 @@
 {
-  "nome": "Dublin-UX",
-  "url": "http://www.meetup.com/Dublin-UX/"
+  "Dublin-UX": {
+    "url": "http://www.meetup.com/Dublin-UX/"
+  },
+  "pythonireland":{
+    "url": "http://www.meetup.com/pythonireland/"
+  }
 }
+

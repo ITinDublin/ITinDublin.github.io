@@ -192,14 +192,8 @@ def get_link(link):
 
 
 def get_groups_meetup(path):
-    groups_meetup = []
     meetups = [json.load(open(fname, 'r', encoding='utf-8')) for fname in glob.glob(path)]
-    for group in meetups:
-        nome = group['nome']
-        url = group['url']
-        groups_meetup.append(nome)
-
-    return groups_meetup
+    return meetups[0].keys()
 
 
 if __name__ == '__main__':
