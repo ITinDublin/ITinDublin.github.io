@@ -44,5 +44,10 @@
         {{ super() }}
         <script src="{{ SITEURL }}/theme/itindublin/eventos.js"></script>
     {% endblock %}
+    <script>
+    $(document).ready(function() {
+        getEventsMeetup("{{ API_SERVICE }}");
+    });
+    </script>
   </div>
 {% endblock %}

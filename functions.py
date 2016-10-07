@@ -3,6 +3,7 @@
 import sys
 import json
 import glob
+import requests
 import shutil
 import posixpath
 import random
@@ -194,6 +195,11 @@ def get_link(link):
 def get_groups_meetup(path):
     meetups = [json.load(open(fname, 'r', encoding='utf-8')) for fname in glob.glob(path)]
     return meetups[0].keys()
+
+
+def clear_cache_event_group_meetup(api_service):
+    url = "{}/clear_all_caches".format(api_service)
+    requests.request("POST", url)
 
 
 if __name__ == '__main__':

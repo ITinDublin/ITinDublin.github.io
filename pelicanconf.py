@@ -13,6 +13,8 @@ from collections import OrderedDict
 AUTHOR = u'ItInDublinBR'
 SITENAME = u'IT In Dublin - BR'
 SITEURL = ''
+API_SERVICE = 'https://itindublin-service-api.herokuapp.com/api/v1'
+# API_SERVICE = 'http://localhost:5000/api/v1'
 
 META_DESCRIPTION = '''Esta é uma iniciativa coletiva com o intuito de compartilhar
                       conhecimento e experiências sobre a área e o mercado.
@@ -304,3 +306,4 @@ GET_LINK = get_link
 GET_TAGS_WIKI = get_tags_wiki
 GET_GROUPS_MEETUP = get_groups_meetup('content/eventos/meetups.json')
 
+clear_cache_event_group_meetup(API_SERVICE)
