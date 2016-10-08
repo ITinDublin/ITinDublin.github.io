@@ -13,6 +13,8 @@ from collections import OrderedDict
 AUTHOR = u'ItInDublinBR'
 SITENAME = u'IT In Dublin - BR'
 SITEURL = ''
+API_SERVICE = 'https://itindublin-service-api.herokuapp.com/api/v1'
+# API_SERVICE = 'http://localhost:5000/api/v1'
 
 META_DESCRIPTION = '''Esta é uma iniciativa coletiva com o intuito de compartilhar
                       conhecimento e experiências sobre a área e o mercado.
@@ -91,6 +93,7 @@ PLUGINS = [
 ]
 
 GOOGLE_GROUPS_MAIL_LIST_NAME = 'it-irlanda-br'
+GOOGLE_ANALYTICS_CODE = 'UA-85207950-1'
 RESPONSIVE_IMAGES = True
 PYGMENTS_STYLE = "perldoc"
 SITEMAP = {
@@ -293,5 +296,14 @@ MALT_HOME = [
         ]
     },
 ]
-
 from functions import *
+
+GET_AVATAR = get_avatar
+GET_WIKI_PAGES = get_wiki_pages
+GET_ARTICLE_AT_GITHUB = get_article_at_github
+GET_ARTICLE_IMAGE = get_article_image
+GET_LINK = get_link
+GET_TAGS_WIKI = get_tags_wiki
+GET_GROUPS_MEETUP = get_groups_meetup('content/eventos/meetups.json')
+
+clear_cache_event_group_meetup(API_SERVICE)

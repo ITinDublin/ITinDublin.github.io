@@ -1,1 +1,53 @@
-{% extends 'page.html' %}
+{% extends "base.html" %}
+
+{% block bannertext %}
+  <h1>{{ page.title }}</h1>
+{% endblock %}
+
+{% block navbar %}
+  {% include "includes/navbar-home.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    {% block pre_content %}{% endblock %}
+
+    <div class="row">
+    <br>
+      <div class="col-xs-12">
+        <div class="row">
+            <div style="text-align: center; font-size: 18px;font-weight: bold;">
+            Lista de Eventos Relacionados a Tecnologia em Dublin
+            </div>
+            <br>
+            <div class="col s12 m12 l12 white z-depth-2 page">
+
+                <div class="col s12 m12 l12 white z-depth-2 page" style="min-height: 300px;" id="events_meetup">
+                    <div style="text-align: center;vertical-align: middle; padding-top: 10%;">
+                        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+        </div>
+        <div id="groups_meetup" style="visibility: hidden">
+            {% for group in  GET_GROUPS_MEETUP %}
+                <input type="hidden" name="g_meetup" value="{{ group }}">
+            {% endfor %}
+        </div>
+
+      </div>
+    </div>
+
+    {% block post_content %}{% endblock %}
+    {% block scripts %}
+        {{ super() }}
+        <script src="{{ SITEURL }}/theme/itindublin/eventos.js"></script>
+    {% endblock %}
+    <script>
+    $(document).ready(function() {
+        getEventsMeetup("{{ API_SERVICE }}");
+    });
+    </script>
+  </div>
+{% endblock %}
