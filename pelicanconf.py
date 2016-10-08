@@ -244,17 +244,17 @@ MALT_HOME = [
         "title": "O que Fazemos?",
         "items": [
             {
-                "title": "Comunidade",
+                "title": "Meetup",
                 "icon": "fa-comments",
-                "text": "Mussum Ipsum, cacilds vidis litro abertis. "
-                        "Si num tem leite então bota uma pinga aí cumpadi! "
-                        "Delegadis gente finis, bibendum egestas augue arcu ut est. "
-                        "Copo furadis é disculpa de bebadis, arcu quam euismod magna. "
-                        "Não sou faixa preta cumpadi, sou preto inteiris, inteiris.",
+                "text": "É uma chance de fazer networking com muitos brasileiros da área de TI (alguns estudando,"
+                        "alguns trabalhando e outros ainda procurando emprego).<br>"
+                        "Ótima oportunidade para tirar dúvidas sobre visto,"
+                        "mercado de trabalho, se apresentar para o pessoal e fazer amizades."
+                ,
                 "buttons": [
                     {
                         "text": "Saiba Mais",
-                        "href": "comunidade",
+                        "href": "encontros",
                     },
                 ],
             },
