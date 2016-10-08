@@ -40,7 +40,7 @@
                     {% endblock %}
                         <h1 id="welcome-wiki">Bem Vindo !</h1>
                         <div class="article-contents" id="wiki-content">
-                        Esta wiki está em fase de desenvolvimento
+                        {{ page.content }}
                         {% for link, titulo, tags in GET_WIKI_PAGES() %}
                             <div class="wiki-list1" id="wiki-list" style="display: none">
                                 <div>
