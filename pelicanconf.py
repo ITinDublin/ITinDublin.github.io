@@ -38,7 +38,8 @@ SITE_LOGO_MOBILE = ''
 #
 # TEMPLATE_PAGES['wiki.html'] = 'wiki/index.html'
 
-WELCOME_TITLE = 'Seja bem vindo ao {}!'.format(SITENAME)
+WELCOME_TITLE = '''Seja bem vindo ao Grupo
+                <p>  {}!'''.format(SITENAME)
 WELCOME_TEXT = 'Grupo Profissionais e Estudantes Brasileiros de IT em Dublin'
 SITE_BACKGROUND_IMAGE = 'images/banners/ireland_capa_c.jpg'
 FOOTER_ABOUT = '''Esta é uma iniciativa coletiva com o intuito de compartilhar
@@ -118,20 +119,16 @@ OPEN_GRAPH_IMAGE = "/images/logo/logo-inv.png"
 # Navbar Links
 NAVBAR_HOME_LINKS = [
     {
-        "title": "Comunidade",
-        "href": "comunidade",
-    },
-    {
-        "title": "Membros",
-        "href": "membros",
+        "title": "Wiki",
+        "href": "wiki",
     },
     {
         "title": "Blog",
         "href": "blog",
     },
     {
-        "title": "Wiki",
-        "href": "wiki",
+        'title': 'Eventos',
+        'href': 'eventos',
     },
     {
         'title': 'Participe',
@@ -142,10 +139,7 @@ NAVBAR_HOME_LINKS = [
                 'title': 'Lista de Discussões',
                 'href': 'lista-de-discussoes',
             },
-            {
-                'title': 'Eventos',
-                'href': 'eventos',
-            },
+
         ]
     },
     {
