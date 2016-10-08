@@ -1,0 +1,16 @@
+<ul id="nav-mobile" class="side-bar-wiki" style="overflow: auto; transform: translateX(0%);">
+<li class="search">
+  <div class="search-wrapper card">
+    {% if SEARCH %}
+        <input type="text" size="60" id="tipue_search_input">
+        <div class="search-results"></div>
+    {% else %}
+        <div class="bold" id="back-side-wiki"><a style="display: block" href="/wiki"> << Voltar </a></div>
+    {% endif %}
+  </div>
+</li>
+
+{% for link, titulo, tags in GET_WIKI_PAGES() %}
+    <li class="bold"><a href="{{ SITEURL }}/{{ link }}"> {{ titulo }}</a></li>
+{% endfor %}
+</ul>

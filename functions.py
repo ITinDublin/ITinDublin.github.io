@@ -26,7 +26,7 @@ def tag_wiki_path(tag_index, default_path='output/wiki/tags'):
             pass
         shutil.copy2('output/wiki.html', 'output/wiki/index.html')
         shutil.copy2('output/tags-wiki.html', 'output/wiki/tags/index.html')
-        shutil.copy2('output/wiki.html', path)
+        shutil.copy2('output/resultados.html', path)
         soup = BeautifulSoup(open(path), 'html.parser')
         extract_div = soup.find(id="wiki-list").extract()
         wiki_content = soup.find(id="wiki-content")

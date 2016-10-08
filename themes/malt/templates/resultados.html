@@ -29,34 +29,24 @@
                 {% include "includes/breadcrumbs.html" %}
 
                 <hr>
-                  {% set SEARCH = true %}
+                  {% set SEARCH = false %}
                   {% include "includes/side_bar_wiki.html" %}
 
                   <div id="content-wiki">
-                    <div id="tipue_search_content" style="display: none;"></div>
-                    
+
                     {% block page_title %}
-                        <h1 id="title-wiki" style="display: none;">{{ page.title }}</h1>
+                        <h1 id="title-wiki">{{ page.title }}</h1>
                     {% endblock %}
-                        <h1 id="welcome-wiki">Bem Vindo !</h1>
-                        <div class="article-contents" id="wiki-content">
-                        Esta wiki está em fase de desenvolvimento
-                        {% for link, titulo, tags in GET_WIKI_PAGES() %}
-                            <div class="wiki-list1" id="wiki-list" style="display: none">
+                        <div class="article-contents" id="wiki-content" style="padding-left: 10px;">
+                            <div class="wiki-list1" id="wiki-list">
                                 <div>
-                                 <a href="{{ SITEURL }}/{{ link }}"> {{ titulo }}</a>
+                                    <a href="{{ SITEURL }}/{{ link }}"> {{ titulo }}</a>
                                 </div>
                                 <div class="tag-wiki" style="padding-top: 2px;">
-                                    {% if tags %}
-                                        <span class="icon"><i title="Tags" class="fa fa-tags"></i></span>
-                                    {% endif %}
-                                    {% for tag in tags %}
-                                        <span class="pill {{ MALT_BASE_COLOR }} lighten-2"><a class="white-text" href="{{ SITEURL }}/wiki/tags/{{ tag.name|escape }}" title="Tag '{{ tag.name|escape }}'">{{ tag.name }}</a></span>
-                                    {% endfor %}
+
                                 </div>
                             </div>
-                        {% endfor %}
-                    </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -73,13 +63,4 @@
     <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.js"></script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/itindublin/wiki.js"></script>
-    <script>
-    $(document).ready(function() {
-         $('#tipue_search_input').tipuesearch({
-             'show': 10,
-             'mode': 'json',
-             'contentLocation': '/tipuesearch_content.json',
-         });
-    });
-    </script>
 {% endblock %}

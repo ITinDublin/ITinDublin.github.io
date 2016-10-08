@@ -105,9 +105,13 @@ http://www.tipue.com/search
                
                $(this).keyup(function(event)
                {
-                    if(event.keyCode == '13')
-                    {
-                         getTipueSearch(0, true);
+                    if($('#tipue_search_input').val().length >= 3){
+                        getTipueSearch(0, true);
+                    }
+                    if($('#tipue_search_input').val().length < 3){
+                        $('#wiki-content').show();
+                        $('#welcome-wiki').show();
+                        $('#tipue_search_content').hide();
                     }
                });
                
@@ -117,7 +121,9 @@ http://www.tipue.com/search
                     $('#tipue_search_content').hide();
                     $('#tipue_search_content').html('<div class="tipue_search_spinner"><div class="tipue_search_rect1"></div><div class="tipue_search_rect2"></div><div class="rect3"></div></div>');
                     $('#tipue_search_content').show();
-                    
+                    $('#wiki-content').hide();
+                    $('#welcome-wiki').hide();
+
                     var out = '';
                     var results = '';
                     var show_replace = false;
