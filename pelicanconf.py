@@ -208,7 +208,7 @@ MALT_COMUNITY = [
             {
                 "icon": "fa fa-facebook",
                 "text": "Facebook",
-                "href": "Facebook",
+                "href": "https://www.facebook.com/groups/ITinDublin/",
             },
         ],
     },
@@ -219,7 +219,7 @@ MALT_COMUNITY = [
             {
                 "icon": "fa-slack",
                 "text": "Slack",
-                "href": "Slack",
+                "href": "https://itindublin.herokuapp.com/",
             },
         ],
     },
@@ -232,7 +232,7 @@ MALT_COMUNITY = [
             {
                 "icon": "fa-email",
                 "text": "Lista",
-                "href": "Lista",
+                "href": "https://groups.google.com/forum/#!forum/it-irlanda-br",
             },
         ],
     }
