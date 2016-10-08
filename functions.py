@@ -19,19 +19,6 @@ from pelican import settings
 from pelican.readers import MarkdownReader, RstReader
 
 
-<<<<<<< HEAD
-def tag_wiki_path(tag_index, default_path='output/wiki/tags'):
-    for tag, values in tag_index.items():
-        path = copy(default_path)
-        path = os.path.join(path, "/".join([tag, 'index.html']))
-        try:
-            os.makedirs(os.path.dirname(path))
-        except Exception:
-            pass
-        shutil.copy2('output/wiki.html', 'output/wiki/index.html')
-        shutil.copy2('output/tags-wiki.html', 'output/wiki/tags/index.html')
-        shutil.copy2('output/resultados.html', path)
-=======
 class TagWiki:
     """
     Classe responsável por criar o índice de  tags da wiki,
@@ -50,7 +37,6 @@ class TagWiki:
         :param values: (dict) páginas referentes a tag. ex: {'url':'#', 'titulo': 'title'}
         :return: html
         """
->>>>>>> 0565251b937622a1e8cda7d2e18d2cc925d84741
         soup = BeautifulSoup(open(path), 'html.parser')
         extract_div = soup.find(id="wiki-list").extract()
         wiki_content = soup.find(id="wiki-content")
@@ -88,7 +74,7 @@ class TagWiki:
             path_for_cp = [
                 ('output/wiki.html', 'output/wiki/index.html'),
                 ('output/tags-wiki.html', 'output/wiki/tags/index.html'),
-                ('output/wiki.html', file_path)
+                ('output/resultados.html', file_path)
             ]
             for file1, file2 in path_for_cp:
                 shutil.copy2(file1, file2)
