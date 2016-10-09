@@ -3,6 +3,7 @@
 import sys
 import json
 import glob
+import unicodedata
 import requests
 import shutil
 import posixpath
@@ -17,6 +18,12 @@ from copy import copy
 from bs4 import BeautifulSoup
 from pelican import settings
 from pelican.readers import MarkdownReader, RstReader
+
+
+def remove_accents(input_str):
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    only_ascii = nfkd_form.encode('ASCII', 'ignore')
+    return only_ascii
 
 
 class TagWiki:
@@ -65,6 +72,7 @@ class TagWiki:
     def _tag_wiki_make_dir(self, default_path='output/wiki/tags'):
         """Monta o path para cada tag."""
         for tag, values in self.tag_index.items():
+            tag = str(remove_accents(tag), 'utf-8')
             file_path = os.path.join(copy(default_path), "/".join([tag, 'index.html']))
             try:
                 os.makedirs(os.path.dirname(file_path))

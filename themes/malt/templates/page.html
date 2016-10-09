@@ -15,6 +15,7 @@
         <div class="row">
             <div class="col s12 m12 l12 white z-depth-2 page">
                 <br>
+                {% set BREADCRUMB_ELEMENTS = [("wiki", "wiki"),(page.title, None)] %}
                 {% include "includes/breadcrumbs.html" %}
                 <hr>
                 {% set SEARCH = false %}
