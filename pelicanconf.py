@@ -128,7 +128,18 @@ NAVBAR_HOME_LINKS = [
     },
     {
         'title': 'Eventos',
-        'href': 'eventos',
+        'href': '#',
+        'desc': 'Eventos da Relacionados a TI e Meetup do Grupo',
+        'children': [
+            {
+                'title': 'Eventos de Ti',
+                'href': 'eventos',
+            },
+            {
+                'title': 'Meetup do Grupo',
+                'href': 'encontros',
+            }
+        ]
     },
     {
         'title': 'Participe',
