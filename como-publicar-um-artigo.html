@@ -25,7 +25,7 @@
             <link href="/blog/feeds.rss" type="application/rss+xml" rel="alternate" title="IT In Dublin - BR RSS Feed"/>
 
         <!-- CSS  -->
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
         <link href="/theme/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="/theme/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -33,10 +33,13 @@
         <link href="/theme/css/pygments/perldoc.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
     <link href="/theme/css/article.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/theme/css/wiki.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="/theme/tipuesearch/tipuesearch.css">
+
 
         <style type="text/css">
           .hero {
-            height: 600px;
+            height: 300px;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url('/images/banners/ireland_capa_c.jpg'); repeat scroll 0 0;
             background-position: 50% 50%;
             background-repeat: no-repeat;
@@ -75,21 +78,25 @@
                     IT In Dublin - BR
                 </a>
                 <ul class="right hide-on-med-and-down">
-                        <li ><a href="/comunidade">Comunidade</a></li>
-                        <li ><a href="/membros">Membros</a></li>
-                        <li ><a href="/blog">Blog</a></li>
                         <li ><a href="/wiki">Wiki</a></li>
-                      <a class='dropdown-button' href="#"  data-activates='dropdown5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        <li ><a href="/blog">Blog</a></li>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown3' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Eventos <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown3' class='dropdown-content1'>
+                          <li><a href="/eventos">Eventos de Ti</a></li>
+                          <li><a href="/encontros">Meetup do Grupo</a></li>
+                      </ul>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown4' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
                         Participe <span class="fa fa-caret-down"></span>
                       </a>
-                      <ul id='dropdown5' class='dropdown-content1'>
+                      <ul id='dropdown4' class='dropdown-content1'>
                           <li><a href="/lista-de-discussoes">Lista de Discussões</a></li>
-                          <li><a href="/eventos">Eventos</a></li>
                       </ul>
-                      <a class='dropdown-button' href="#"  data-activates='dropdown6' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                      <a class='dropdown-button' href="#"  data-activates='dropdown5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
                         Contribua <span class="fa fa-caret-down"></span>
                       </a>
-                      <ul id='dropdown6' class='dropdown-content1'>
+                      <ul id='dropdown5' class='dropdown-content1'>
                           <li><a href="/como-contribuir-com-a-wiki">Contribuir com a Wiki</a></li>
                           <li><a href="/como-publicar-um-artigo">Contribuir com o Blog</a></li>
                       </ul>
@@ -108,21 +115,25 @@
                             </div>
                         </div>
                     </li>
-                        <li ><a href="/comunidade">Comunidade</a></li>
-                        <li ><a href="/membros">Membros</a></li>
-                        <li ><a href="/blog">Blog</a></li>
                         <li ><a href="/wiki">Wiki</a></li>
-                      <a class='dropdown-button' href="#"  data-activates='dropdown_m5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        <li ><a href="/blog">Blog</a></li>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m3' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Eventos <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown_m3' class='dropdown-content1'>
+                          <li><a href="/eventos">Eventos de Ti</a></li>
+                          <li><a href="/encontros">Meetup do Grupo</a></li>
+                      </ul>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m4' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
                         Participe <span class="fa fa-caret-down"></span>
                       </a>
-                      <ul id='dropdown_m5' class='dropdown-content1'>
+                      <ul id='dropdown_m4' class='dropdown-content1'>
                           <li><a href="/lista-de-discussoes">Lista de Discussões</a></li>
-                          <li><a href="/eventos">Eventos</a></li>
                       </ul>
-                      <a class='dropdown-button' href="#"  data-activates='dropdown_m6' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
                         Contribua <span class="fa fa-caret-down"></span>
                       </a>
-                      <ul id='dropdown_m6' class='dropdown-content1'>
+                      <ul id='dropdown_m5' class='dropdown-content1'>
                           <li><a href="/como-contribuir-com-a-wiki">Contribuir com a Wiki</a></li>
                           <li><a href="/como-publicar-um-artigo">Contribuir com o Blog</a></li>
                       </ul>
@@ -141,7 +152,6 @@
     <div class="row">
     <br>
       <div class="col-xs-12">
-
         <div class="row">
             <div class="col s12 m12 l12 white z-depth-2 page">
                 <br>
@@ -154,9 +164,24 @@
         </li>
         <li class="grey-text text-lighten-1">Como publicar um artigo</li>
 </ul>                <hr>
-                    <h1 style="padding: 0px 50px">Como publicar um artigo</h1>
-                <div class="article-contents">
-                <html><body><h2>Escrevendo um Artigo para o Blog</h2>
+<ul id="nav-mobile" class="side-bar-wiki" style="overflow: auto; transform: translateX(0%);">
+<li class="search">
+  <div class="search-wrapper card">
+        <div class="bold" id="back-side-wiki"><a style="display: block" href="/wiki"> << Voltar </a></div>
+  </div>
+</li>
+
+    <li class="bold"><a href="/duvidas-sobre-visto"> Dúvidas sobre visto</a></li>
+    <li class="bold"><a href="/regras-do-grupo"> Regras do Grupo</a></li>
+</ul>
+                <div id="content-wiki">
+                    <div id="tipue_search_content" style="display: none;"></div>
+                    <div class="wiki-tags">
+                        <span class="icon"><i title="Tags" class="fa fa-tags"></i></span>
+                    </div>
+                        <h1 style="padding: 0px 50px" id="title-wiki">Como publicar um artigo</h1>
+                    <div class="article-contents">
+                    <html><body><h2>Escrevendo um Artigo para o Blog</h2>
 <p>Para escrever um artigo para o blog, é necessário apenas criar um arquivo no formato (.rst ou .md) que são linguagens de marcação aceitas pelo Pelican.
 Esse arquivo deve ser criado dentro do diretório <em><code>content/articles</code></em> </p>
 <p>Um artigo tem um cabeçalho fixo, conforme abaixo (em ReST):</p>
@@ -184,10 +209,9 @@ Logo abaixo temos o nome do autor, categoria e uma lista de tags. </p>
 <p><strong>Referência:</strong> <br/>
 O Modelo deste site foi construido utilizando como referência o site do Grupy-df cuja o link encontra-se abaixo.<br/>
 <a href="http://df.python.org.br/blog/como-publicar-no-blog-do-grupy-df/">http://df.python.org.br/blog/como-publicar-no-blog-do-grupy-df/</a> </p></body></html>
-                <br><br>
-                <div class="article-tags">
-                    <span class="icon"><i title="Tags" class="fa fa-tags"></i></span>
-            </div>
+                    <br><br>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -251,10 +275,23 @@ O Modelo deste site foi construido utilizando como referência o site do Grupy-d
     </div>
 </footer>
             <!-- Scripts -->
-            <script src="/theme/js/jquery-2.1.1.min.js"></script>
+              <script src="/theme/js/jquery-2.1.1.min.js"></script>
             <script src="/theme/js/materialize.min.js"></script>
             <script src="/theme/js/parallax.js"></script>
             <script src="/theme/js/init.js"></script>
+
+    <script type="text/javascript" src="/theme/tipuesearch/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="/theme/tipuesearch/tipuesearch.js"></script>
+    <script type="text/javascript" src="/theme/itindublin/wiki.js"></script>
+    <script>
+    $(document).ready(function() {
+         $('#tipue_search_input').tipuesearch({
+             'show': 10,
+             'mode': 'json',
+             'contentLocation': '/tipuesearch_content.json',
+         });
+    });
+    </script>
         </main>
     </body>
 </html>

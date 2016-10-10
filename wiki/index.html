@@ -38,7 +38,7 @@
 
         <style type="text/css">
           .hero {
-            height: 600px;
+            height: 300px;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url('/images/banners/ireland_capa_c.jpg'); repeat scroll 0 0;
             background-position: 50% 50%;
             background-repeat: no-repeat;
@@ -77,21 +77,25 @@
                     IT In Dublin - BR
                 </a>
                 <ul class="right hide-on-med-and-down">
-                        <li ><a href="/comunidade">Comunidade</a></li>
-                        <li ><a href="/membros">Membros</a></li>
-                        <li ><a href="/blog">Blog</a></li>
                         <li class="active"><a href="/wiki">Wiki</a></li>
-                      <a class='dropdown-button' href="#"  data-activates='dropdown5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        <li ><a href="/blog">Blog</a></li>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown3' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Eventos <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown3' class='dropdown-content1'>
+                          <li><a href="/eventos">Eventos de Ti</a></li>
+                          <li><a href="/encontros">Meetup do Grupo</a></li>
+                      </ul>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown4' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
                         Participe <span class="fa fa-caret-down"></span>
                       </a>
-                      <ul id='dropdown5' class='dropdown-content1'>
+                      <ul id='dropdown4' class='dropdown-content1'>
                           <li><a href="/lista-de-discussoes">Lista de Discussões</a></li>
-                          <li><a href="/eventos">Eventos</a></li>
                       </ul>
-                      <a class='dropdown-button' href="#"  data-activates='dropdown6' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                      <a class='dropdown-button' href="#"  data-activates='dropdown5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
                         Contribua <span class="fa fa-caret-down"></span>
                       </a>
-                      <ul id='dropdown6' class='dropdown-content1'>
+                      <ul id='dropdown5' class='dropdown-content1'>
                           <li><a href="/como-contribuir-com-a-wiki">Contribuir com a Wiki</a></li>
                           <li><a href="/como-publicar-um-artigo">Contribuir com o Blog</a></li>
                       </ul>
@@ -110,21 +114,25 @@
                             </div>
                         </div>
                     </li>
-                        <li ><a href="/comunidade">Comunidade</a></li>
-                        <li ><a href="/membros">Membros</a></li>
-                        <li ><a href="/blog">Blog</a></li>
                         <li class="active"><a href="/wiki">Wiki</a></li>
-                      <a class='dropdown-button' href="#"  data-activates='dropdown_m5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        <li ><a href="/blog">Blog</a></li>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m3' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Eventos <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown_m3' class='dropdown-content1'>
+                          <li><a href="/eventos">Eventos de Ti</a></li>
+                          <li><a href="/encontros">Meetup do Grupo</a></li>
+                      </ul>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m4' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
                         Participe <span class="fa fa-caret-down"></span>
                       </a>
-                      <ul id='dropdown_m5' class='dropdown-content1'>
+                      <ul id='dropdown_m4' class='dropdown-content1'>
                           <li><a href="/lista-de-discussoes">Lista de Discussões</a></li>
-                          <li><a href="/eventos">Eventos</a></li>
                       </ul>
-                      <a class='dropdown-button' href="#"  data-activates='dropdown_m6' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
                         Contribua <span class="fa fa-caret-down"></span>
                       </a>
-                      <ul id='dropdown_m6' class='dropdown-content1'>
+                      <ul id='dropdown_m5' class='dropdown-content1'>
                           <li><a href="/como-contribuir-com-a-wiki">Contribuir com a Wiki</a></li>
                           <li><a href="/como-publicar-um-artigo">Contribuir com o Blog</a></li>
                       </ul>
@@ -146,6 +154,7 @@
       <div class="col-xs-12">
 
         <div class="row">
+
             <div class="col s12 m12 l12 white z-depth-2 page">
                 <br>
 <ul class="breadcrumb">
@@ -157,38 +166,95 @@
         </li>
         <li class="grey-text text-lighten-1">Páginas da Wiki</li>
 </ul>
-                <div align="center">
-                    <input type="text" size="60" id="tipue_search_input">
-                    <input type="button" id="tipue_search_button" value="Search" disabled>
-                </div>
-                <div id="tipue_search_content"></div>
                 <hr>
+<ul id="nav-mobile" class="side-bar-wiki" style="overflow: auto; transform: translateX(0%);">
+<li class="search">
+  <div class="search-wrapper card">
+        <input type="text" size="60" id="tipue_search_input">
+        <div class="search-results"></div>
+  </div>
+</li>
 
-                    <h1 id="title-wiki" style="padding: 0px 50px">Páginas da Wiki</h1>
-                <div class="article-contents" id="wiki-content">
-                    <div class="wiki-list1" id="wiki-list">
-                        <div>
-                         <a href="/duvidas-sobre-visto"> Dúvidas sobre visto</a>
-                        </div>
-                        <div class="tag-wiki" style="padding-top: 2px;">
-                                <span class="icon"><i title="Tags" class="fa fa-tags"></i></span>
-                                <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/dúvida" title="Tag 'dúvida'">dúvida</a></span>
-                                <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/visto" title="Tag 'visto'">visto</a></span>
-                                <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/trabalho" title="Tag 'trabalho'">trabalho</a></span>
-                                <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/estudante" title="Tag 'estudante'">estudante</a></span>
-                        </div>
+    <li class="bold"><a href="/duvidas-sobre-visto"> Dúvidas sobre visto</a></li>
+    <li class="bold"><a href="/regras-do-grupo"> Regras do Grupo</a></li>
+</ul>
+                  <div id="content-wiki">
+                    <div id="tipue_search_content" style="display: none;"></div>
+                    
+                        <h1 id="title-wiki" style="display: none;">Páginas da Wiki</h1>
+                        <h1 id="welcome-wiki">Bem Vindo !</h1>
+                        <div class="article-contents" id="wiki-content">
+                        <html><body><p>Wiki da comunidade Brasileira de TI na Irlanda</p>
+<h2>Sobre</h2>
+<hr/>
+<p>Seja bem-vindo à wiki da comunidade brasileira de profissionais de IT na Irlanda. Esta é uma iniciativa coletiva com o intuito de compartilhar conhecimento e experiências sobre a área e o mercado. Se você trabalha (ou já trabalhou) com TI na Irlanda, provavelmente tem algo a acrescentar.</p>
+<p>Editores são encorajados a compartilhar conteúdo especialmente nos seguintes assuntos:</p>
+<ul>
+<li>
+<p>Review de empresas</p>
+</li>
+<li>
+<p>Áreas de atuação</p>
+</li>
+<li>
+<p>Eventos recorrentes (eventos esporádicos podem ser divulgados no site de capa)</p>
+</li>
+<li>
+<p>Busca por emprego</p>
+</li>
+<li>
+<p>Visto de trabalho</p>
+</li>
+<li>
+<p>Documentação</p>
+</li>
+<li>
+<p>Abertura e regras para Start-ups</p>
+</li>
+</ul>
+<p>E quaisquer outros temas que costumam gerar dúvidas.</p>
+<h2>Contribuiçoes, gostaria de contribuir?</h2>
+<hr/>
+<p>Veja como e Fácil  </p>
+<ul>
+<li>
+<p><a href="/como-contribuir-com-a-wiki">Criar página na Wiki</a> </p>
+</li>
+<li>
+<p><a href="/como-publicar-um-artigo">Publicar Artigo</a></p>
+</li>
+</ul>
+<p>Não possui conhecimento em desenvolvimento? ou github? sem problema apenas crie um issue clique no link e contribua <a href="https://github.com/ITinDublin/ITinDublin.github.io/issues/new?title=New%20Request:">issue</a></p>
+<p>você pode adicionar fontes, imagens arquivo o que desejar.</p>
+<h2>Contato</h2>
+<hr/>
+<p>Para entrar em contato com outros colaboradores, visite:</p>
+<p>slack:  <a href="https://itindublin.herokuapp.com/">https://itindublin.herokuapp.com/</a></p>
+<p>google forum: <a href="https://groups.google.com/forum/#!forum/it-irlanda-br">https://groups.google.com/forum/#!forum/it-irlanda-br</a></p>
+<p>facebook page: <a href="https://www.facebook.com/groups/ITinDublin/">https://www.facebook.com/groups/ITinDublin/</a></p></body></html>
+                            <div class="wiki-list1" id="wiki-list" style="display: none">
+                                <div>
+                                 <a href="/duvidas-sobre-visto"> Dúvidas sobre visto</a>
+                                </div>
+                                <div class="tag-wiki" style="padding-top: 2px;">
+                                        <span class="icon"><i title="Tags" class="fa fa-tags"></i></span>
+                                        <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/dúvida" title="Tag 'dúvida'">dúvida</a></span>
+                                        <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/visto" title="Tag 'visto'">visto</a></span>
+                                        <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/trabalho" title="Tag 'trabalho'">trabalho</a></span>
+                                        <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/estudante" title="Tag 'estudante'">estudante</a></span>
+                                </div>
+                            </div>
+                            <div class="wiki-list1" id="wiki-list" style="display: none">
+                                <div>
+                                 <a href="/regras-do-grupo"> Regras do Grupo</a>
+                                </div>
+                                <div class="tag-wiki" style="padding-top: 2px;">
+                                        <span class="icon"><i title="Tags" class="fa fa-tags"></i></span>
+                                        <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/regras" title="Tag 'regras'">regras</a></span>
+                                        <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/visto" title="Tag 'visto'">visto</a></span>
+                                </div>
+                            </div>
                     </div>
-                    <hr>
-                    <div class="wiki-list1" id="wiki-list">
-                        <div>
-                         <a href="/regras-do-grupo"> Regras do Grupo</a>
-                        </div>
-                        <div class="tag-wiki" style="padding-top: 2px;">
-                                <span class="icon"><i title="Tags" class="fa fa-tags"></i></span>
-                                <span class="pill black lighten-2"><a class="white-text" href="/wiki/tags/regras" title="Tag 'regras'">regras</a></span>
-                        </div>
-                    </div>
-                    <hr>
                 </div>
             </div>
         </div>
@@ -258,14 +324,14 @@
             <script src="/theme/js/init.js"></script>
 
     <script type="text/javascript" src="/theme/tipuesearch/tipuesearch_set.js"></script>
-    <script type="text/javascript" src="/theme/tipuesearch/tipuesearch.min.js"></script>
-
+    <script type="text/javascript" src="/theme/tipuesearch/tipuesearch.js"></script>
+    <script type="text/javascript" src="/theme/itindublin/wiki.js"></script>
     <script>
     $(document).ready(function() {
          $('#tipue_search_input').tipuesearch({
              'show': 10,
              'mode': 'json',
-             'contentLocation': '/tipuesearch_content.json'
+             'contentLocation': '/tipuesearch_content.json',
          });
     });
     </script>

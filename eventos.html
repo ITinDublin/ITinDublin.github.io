@@ -18,25 +18,23 @@
         <meta name="generator" content="Feito com Materialize, Pelican,
         Python e VIM. ">
         <meta name="theme-color" content="black"/>
-        <title>Eventos | IT In Dublin - BR</title>
+        <title>IT In Dublin - BR</title>
 
         <!-- Feeds -->
             <link href="/blog/feeds.atom" type="application/atom+xml" rel="alternate" title="IT In Dublin - BR ATOM Feed"/>
             <link href="/blog/feeds.rss" type="application/rss+xml" rel="alternate" title="IT In Dublin - BR RSS Feed"/>
 
         <!-- CSS  -->
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
         <link href="/theme/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="/theme/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="/theme/css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="/theme/css/pygments/perldoc.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-    <link href="/theme/css/article.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
         <style type="text/css">
           .hero {
-            height: 600px;
+            height: 300px;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url('/images/banners/ireland_capa_c.jpg'); repeat scroll 0 0;
             background-position: 50% 50%;
             background-repeat: no-repeat;
@@ -75,21 +73,25 @@
                     IT In Dublin - BR
                 </a>
                 <ul class="right hide-on-med-and-down">
-                        <li ><a href="/comunidade">Comunidade</a></li>
-                        <li ><a href="/membros">Membros</a></li>
-                        <li ><a href="/blog">Blog</a></li>
                         <li ><a href="/wiki">Wiki</a></li>
-                      <a class='dropdown-button' href="#"  data-activates='dropdown5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        <li ><a href="/blog">Blog</a></li>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown3' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Eventos <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown3' class='dropdown-content1'>
+                          <li><a href="/eventos">Eventos de Ti</a></li>
+                          <li><a href="/encontros">Meetup do Grupo</a></li>
+                      </ul>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown4' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
                         Participe <span class="fa fa-caret-down"></span>
                       </a>
-                      <ul id='dropdown5' class='dropdown-content1'>
+                      <ul id='dropdown4' class='dropdown-content1'>
                           <li><a href="/lista-de-discussoes">Lista de Discussões</a></li>
-                          <li><a href="/eventos">Eventos</a></li>
                       </ul>
-                      <a class='dropdown-button' href="#"  data-activates='dropdown6' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                      <a class='dropdown-button' href="#"  data-activates='dropdown5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
                         Contribua <span class="fa fa-caret-down"></span>
                       </a>
-                      <ul id='dropdown6' class='dropdown-content1'>
+                      <ul id='dropdown5' class='dropdown-content1'>
                           <li><a href="/como-contribuir-com-a-wiki">Contribuir com a Wiki</a></li>
                           <li><a href="/como-publicar-um-artigo">Contribuir com o Blog</a></li>
                       </ul>
@@ -108,21 +110,25 @@
                             </div>
                         </div>
                     </li>
-                        <li ><a href="/comunidade">Comunidade</a></li>
-                        <li ><a href="/membros">Membros</a></li>
-                        <li ><a href="/blog">Blog</a></li>
                         <li ><a href="/wiki">Wiki</a></li>
-                      <a class='dropdown-button' href="#"  data-activates='dropdown_m5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        <li ><a href="/blog">Blog</a></li>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m3' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                        Eventos <span class="fa fa-caret-down"></span>
+                      </a>
+                      <ul id='dropdown_m3' class='dropdown-content1'>
+                          <li><a href="/eventos">Eventos de Ti</a></li>
+                          <li><a href="/encontros">Meetup do Grupo</a></li>
+                      </ul>
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m4' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
                         Participe <span class="fa fa-caret-down"></span>
                       </a>
-                      <ul id='dropdown_m5' class='dropdown-content1'>
+                      <ul id='dropdown_m4' class='dropdown-content1'>
                           <li><a href="/lista-de-discussoes">Lista de Discussões</a></li>
-                          <li><a href="/eventos">Eventos</a></li>
                       </ul>
-                      <a class='dropdown-button' href="#"  data-activates='dropdown_m6' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                      <a class='dropdown-button' href="#"  data-activates='dropdown_m5' role="button" aria-haspopup="true" aria-expanded="false" style="float: left;">
                         Contribua <span class="fa fa-caret-down"></span>
                       </a>
-                      <ul id='dropdown_m6' class='dropdown-content1'>
+                      <ul id='dropdown_m5' class='dropdown-content1'>
                           <li><a href="/como-contribuir-com-a-wiki">Contribuir com a Wiki</a></li>
                           <li><a href="/como-publicar-um-artigo">Contribuir com o Blog</a></li>
                       </ul>
@@ -133,42 +139,54 @@
     </nav>
 </div>
             <!-- Banner -->
+            <div class="hero parallax-effect">
+                <div class="container">
+                    <div class="hero-content animated bounceInDown slow">
+  <h1>Eventos</h1>
+                    </div>
+                </div>
+            </div>
         </header>
         <main>
             <!-- Content -->
-  <div class="container">
+    <div class="container">
 
     <div class="row">
     <br>
       <div class="col-xs-12">
-
         <div class="row">
-            <div class="col s12 m12 l12 white z-depth-2 page">
-                <br>
-<ul class="breadcrumb">
-    <li>
-    <a class="grey-text text-darken-1" title="IT In Dublin - BR Home" href="/"><i class="fa fa-home grey-text text-darken-2"></i></a>
-    </li>
-        <li>
-        <a class="grey-text text-darken-1" title="wiki|escape" href="/wiki">wiki</a>
-        </li>
-        <li class="grey-text text-lighten-1">Eventos</li>
-</ul>                <hr>
-                    <h1 style="padding: 0px 50px">Eventos</h1>
-                <div class="article-contents">
-                <html><body><p>Página para a divulgação dos eventos da comunidade.</p></body></html>
-                <br><br>
-                <div class="article-tags">
-                    <span class="icon"><i title="Tags" class="fa fa-tags"></i></span>
+            <div style="text-align: center; font-size: 18px;font-weight: bold;">
+            Lista de Eventos Relacionados a Tecnologia em Dublin
             </div>
+            <br>
+            <div class="col s12 m12 l12 white z-depth-2 page">
+                <div class="col s12 m12 l12 white z-depth-2 page" style="min-height: 300px;" id="events_meetup">
+                    <div style="text-align: center;vertical-align: middle; padding-top: 10%;">
+                        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                    </div>
                 </div>
+                <br><br>
             </div>
         </div>
-
+        <div id="groups_meetup" style="visibility: hidden">
+                <input type="hidden" name="g_meetup" value="pythonireland">
+                <input type="hidden" name="g_meetup" value="Dublin-UX">
+        </div>
 
       </div>
     </div>
 
+                    <script src="/theme/js/jquery-2.1.1.min.js"></script>
+            <script src="/theme/js/materialize.min.js"></script>
+            <script src="/theme/js/parallax.js"></script>
+            <script src="/theme/js/init.js"></script>
+
+        <script src="/theme/itindublin/eventos.js"></script>
+    <script>
+    $(document).ready(function() {
+        getEventsMeetup("https://itindublin-service-api.herokuapp.com/api/v1");
+    });
+    </script>
   </div>
 
             <!-- Footer -->
@@ -224,10 +242,12 @@
     </div>
 </footer>
             <!-- Scripts -->
-            <script src="/theme/js/jquery-2.1.1.min.js"></script>
+                    <script src="/theme/js/jquery-2.1.1.min.js"></script>
             <script src="/theme/js/materialize.min.js"></script>
             <script src="/theme/js/parallax.js"></script>
             <script src="/theme/js/init.js"></script>
+
+        <script src="/theme/itindublin/eventos.js"></script>
         </main>
     </body>
 </html>
