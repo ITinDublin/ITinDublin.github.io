@@ -1,15 +1,10 @@
-{% extends "base.html" %}
+{% extends "wiki.html" %}
 
 {% block title %}{{ page.title }} | {{ SITENAME }}{% endblock %}
-{% block banner %}
-{% endblock %}
-{% block navbar %}
-    {% include "includes/navbar-home.html" %}
-{% endblock %}
 {% block styles %}
     {{ super() }}
-    <link href="{{ SITEURL }}/theme/css/article.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 {% endblock %}
+
 {% block content %}
   <div class="container">
     {% block pre_content %}{% endblock %}
@@ -17,25 +12,31 @@
     <div class="row">
     <br>
       <div class="col-xs-12">
-       {% set BREADCRUMB_ELEMENTS = [("wiki", "wiki"),(page.title, None)] %}
-
         <div class="row">
             <div class="col s12 m12 l12 white z-depth-2 page">
                 <br>
+                {% set BREADCRUMB_ELEMENTS = [("wiki", "wiki"),(page.title, None)] %}
                 {% include "includes/breadcrumbs.html" %}
                 <hr>
-                {% block page_title %}
-                    <h1 style="padding: 0px 50px">{{ page.title }}</h1>
-                {% endblock %}
-                <div class="article-contents">
-                {{ page.content }}
-                <br><br>
-                <div class="article-tags">
-                    <span class="icon"><i title="Tags" class="fa fa-tags"></i></span>
-                    {% for tag in page.tags %}
-                    <span class="pill {{ MALT_BASE_COLOR }} lighten-2"><a class="white-text" href="{{ SITEURL }}/{{ tag.url|replace("blog", "wiki") }}" title="Tag '{{ tag.name|escape }}'">{{ tag.name }}</a></span>
-                {% endfor %}
-            </div>
+                {% set SEARCH = false %}
+                {% include "includes/side_bar_wiki.html" %}
+
+                <div id="content-wiki">
+                    <div id="tipue_search_content" style="display: none;"></div>
+                    <div class="wiki-tags">
+                        <span class="icon"><i title="Tags" class="fa fa-tags"></i></span>
+                        {% for tag in page.tags %}
+                            <span class="pill {{ MALT_BASE_COLOR }} lighten-2"><a class="white-text" href="{{ SITEURL }}/{{ tag.url|replace("blog", "wiki") }}" title="Tag '{{ tag.name }}'">{{ tag.name }}</a></span>
+                        {% endfor %}
+                    </div>
+                    {% block page_title %}
+                        <h1 style="padding: 0px 50px" id="title-wiki">{{ page.title }}</h1>
+                    {% endblock %}
+                    <div class="article-contents">
+                    {{ page.content }}
+                    <br><br>
+
+                    </div>
                 </div>
             </div>
         </div>

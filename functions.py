@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 import sys
+import json
+import glob
+import unicodedata
+import requests
 import shutil
 import posixpath
 import random
@@ -14,6 +18,12 @@ from copy import copy
 from bs4 import BeautifulSoup
 from pelican import settings
 from pelican.readers import MarkdownReader, RstReader
+
+
+def remove_accents(input_str):
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    only_ascii = nfkd_form.encode('ASCII', 'ignore')
+    return only_ascii
 
 
 class TagWiki:
@@ -62,6 +72,7 @@ class TagWiki:
     def _tag_wiki_make_dir(self, default_path='output/wiki/tags'):
         """Monta o path para cada tag."""
         for tag, values in self.tag_index.items():
+            tag = str(remove_accents(tag), 'utf-8')
             file_path = os.path.join(copy(default_path), "/".join([tag, 'index.html']))
             try:
                 os.makedirs(os.path.dirname(file_path))
@@ -71,7 +82,7 @@ class TagWiki:
             path_for_cp = [
                 ('output/wiki.html', 'output/wiki/index.html'),
                 ('output/tags-wiki.html', 'output/wiki/tags/index.html'),
-                ('output/wiki.html', file_path)
+                ('output/resultados.html', file_path)
             ]
             for file1, file2 in path_for_cp:
                 shutil.copy2(file1, file2)
@@ -187,6 +198,16 @@ def get_article_at_github(article, repo, branch):
 
 def get_link(link):
     return link if link.startswith('http://') or link.startswith('https://') else '/' + link
+
+
+def get_groups_meetup(path):
+    meetups = [json.load(open(fname, 'r', encoding='utf-8')) for fname in glob.glob(path)]
+    return meetups[0].keys()
+
+
+def clear_cache_event_group_meetup(api_service):
+    url = "{}/clear_all_caches".format(api_service)
+    requests.request("POST", url)
 
 
 if __name__ == '__main__':

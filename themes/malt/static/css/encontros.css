@@ -1,0 +1,44 @@
+
+@media (min-width: 991px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero .logo {
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero {
+    height: 550px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero .logo {
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    height: 450px;
+    font-size: 0.8em;
+  }
+}

@@ -9,9 +9,8 @@ http://www.tipue.com/search
 
 #tipue_search_content {
     max-width: 650px;
-    clear: left;
-    margin: 0;
-    padding: 25px 0 13px 0;
+    padding-top: 5px;
+    padding-left: 0px;
 }
 
 #tipue_search_loading {
@@ -168,6 +167,6 @@ http://www.tipue.com/search
 #tipue_search_input { text-align: left;
     background: #f1f1f1 url('../img/search.png') no-repeat 10px 10px;
 	padding: 7px 13px 8px 30px;
-    height: 20px;
-    width: 50%;
+    height: 30px;
+    width: 80%;
 }

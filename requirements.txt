@@ -21,3 +21,4 @@ smartypants
 typogrify
 unidecode
 ghp-import
+requests

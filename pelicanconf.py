@@ -13,6 +13,8 @@ from collections import OrderedDict
 AUTHOR = u'ItInDublinBR'
 SITENAME = u'IT In Dublin - BR'
 SITEURL = ''
+API_SERVICE = 'https://itindublin-service-api.herokuapp.com/api/v1'
+# API_SERVICE = 'http://localhost:5000/api/v1'
 
 META_DESCRIPTION = '''Esta é uma iniciativa coletiva com o intuito de compartilhar
                       conhecimento e experiências sobre a área e o mercado.
@@ -36,7 +38,8 @@ SITE_LOGO_MOBILE = ''
 #
 # TEMPLATE_PAGES['wiki.html'] = 'wiki/index.html'
 
-WELCOME_TITLE = 'Seja bem vindo ao {}!'.format(SITENAME)
+WELCOME_TITLE = '''Seja bem vindo ao Grupo
+                <p>  {}!'''.format(SITENAME)
 WELCOME_TEXT = 'Grupo Profissionais e Estudantes Brasileiros de IT em Dublin'
 SITE_BACKGROUND_IMAGE = 'images/banners/ireland_capa_c.jpg'
 FOOTER_ABOUT = '''Esta é uma iniciativa coletiva com o intuito de compartilhar
@@ -116,20 +119,27 @@ OPEN_GRAPH_IMAGE = "/images/logo/logo-inv.png"
 # Navbar Links
 NAVBAR_HOME_LINKS = [
     {
-        "title": "Comunidade",
-        "href": "comunidade",
-    },
-    {
-        "title": "Membros",
-        "href": "membros",
+        "title": "Wiki",
+        "href": "wiki",
     },
     {
         "title": "Blog",
         "href": "blog",
     },
     {
-        "title": "Wiki",
-        "href": "wiki",
+        'title': 'Eventos',
+        'href': '#',
+        'desc': 'Eventos da Relacionados a TI e Meetup do Grupo',
+        'children': [
+            {
+                'title': 'Eventos de Ti',
+                'href': 'eventos',
+            },
+            {
+                'title': 'Meetup do Grupo',
+                'href': 'encontros',
+            }
+        ]
     },
     {
         'title': 'Participe',
@@ -140,10 +150,7 @@ NAVBAR_HOME_LINKS = [
                 'title': 'Lista de Discussões',
                 'href': 'lista-de-discussoes',
             },
-            {
-                'title': 'Eventos',
-                'href': 'eventos',
-            },
+
         ]
     },
     {
@@ -212,7 +219,7 @@ MALT_COMUNITY = [
             {
                 "icon": "fa fa-facebook",
                 "text": "Facebook",
-                "href": "Facebook",
+                "href": "https://www.facebook.com/groups/ITinDublin/",
             },
         ],
     },
@@ -223,7 +230,7 @@ MALT_COMUNITY = [
             {
                 "icon": "fa-slack",
                 "text": "Slack",
-                "href": "Slack",
+                "href": "https://itindublin.herokuapp.com/",
             },
         ],
     },
@@ -236,7 +243,7 @@ MALT_COMUNITY = [
             {
                 "icon": "fa-email",
                 "text": "Lista",
-                "href": "Lista",
+                "href": "https://groups.google.com/forum/#!forum/it-irlanda-br",
             },
         ],
     }
@@ -248,17 +255,17 @@ MALT_HOME = [
         "title": "O que Fazemos?",
         "items": [
             {
-                "title": "Comunidade",
+                "title": "Meetup",
                 "icon": "fa-comments",
-                "text": "Mussum Ipsum, cacilds vidis litro abertis. "
-                        "Si num tem leite então bota uma pinga aí cumpadi! "
-                        "Delegadis gente finis, bibendum egestas augue arcu ut est. "
-                        "Copo furadis é disculpa de bebadis, arcu quam euismod magna. "
-                        "Não sou faixa preta cumpadi, sou preto inteiris, inteiris.",
+                "text": "É uma chance de fazer networking com muitos brasileiros da área de TI (alguns estudando,"
+                        "alguns trabalhando e outros ainda procurando emprego).<br>"
+                        "Ótima oportunidade para tirar dúvidas sobre visto,"
+                        "mercado de trabalho, se apresentar para o pessoal e fazer amizades."
+                ,
                 "buttons": [
                     {
                         "text": "Saiba Mais",
-                        "href": "comunidade",
+                        "href": "encontros",
                     },
                 ],
             },
@@ -302,5 +309,6 @@ GET_ARTICLE_AT_GITHUB = get_article_at_github
 GET_ARTICLE_IMAGE = get_article_image
 GET_LINK = get_link
 GET_TAGS_WIKI = get_tags_wiki
+GET_GROUPS_MEETUP = get_groups_meetup('content/eventos/meetups.json')
 
-
+clear_cache_event_group_meetup(API_SERVICE)
