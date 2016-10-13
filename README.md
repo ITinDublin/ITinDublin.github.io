@@ -112,8 +112,13 @@ Para finalizar o servidor use:
 Após realizar as alterações e testes, faça o commit para o seu repositório local e depois nos envie um PULL Request.
 
 
+## Contributing, gostaria de contribuir?
 
-## Contributing
+Veja como e Facil
+
+Nao possui conhecimento em desenvolvimento? ou github? sem problema apenas crie um issue clique no link e contribua [issue](https://github.com/ITinDublin/ITinDublin.github.io//issues/new?title=New%20Request:)
+
+voce pode adicionar fontes, imagens arquivo o que desejar.
 
 
 em fases de testes:
