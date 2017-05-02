@@ -1,127 +1,122 @@
-#Grupo It in Dublin - BR
+# Grupo It in Dublin 🇧🇷
+> [Site do Grupo](https://itindublin.github.io/)
 
 [![Build Status](https://travis-ci.org/ITinDublin/ITinDublin.github.io.svg?branch=develop)](https://travis-ci.org/ITinDublin/ITinDublin.github.io)
-
 [![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
 [![npm version](https://badge.fury.io/js/bower.svg)](https://badge.fury.io/js/bower)
 
-# [Site do Grupo](https://itindublin.github.io/)
+## Sumário
 
+- [Sobre](#sobre)
+- [Rodando o projeto localmente](#repositorio-local)
+- [Contribuição](#contruibuicao) 
 
-## Summary
+## <a name="sobre"></a>Seja Bem-Vindo!
 
-- [About](#about)
-- [Request](#request)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
+### Encontros
+Costumamos nos encontrar todo primeiro sábado do mês, às 18:00.
 
+* **Local:** Pub _[Doyles In Town](www.doylesintown.com)_
+* **Endereço:** [9 College Street, Dublin 2](https://goo.gl/maps/GBhYSCg9JUm) (Próximo à Trinity College e ao Bank of Ireland)
 
+Chegando lá, suba as escadas. Caso não encontre, perguntem no bar pelo "**IT Meetup**".
 
-Seja bem vindo!
+### Discussões
+Temos alguns canais para discurtimos coisas relacionadas sobre a área de IT em Dublin e tópicos relacionados:
 
-Costumamos nos encontrar todo primeiro sábado do mês, às 18:00,
-
-Local: Pub "Doyles In Town" - www.doylesintown.com
-9 College Street, Dublin 2
-Próximo à Trinity College e ao Bank of Ireland
-[https://goo.gl/maps/GBhYSCg9JUm](https://goo.gl/maps/GBhYSCg9JUm)
-Chegando lá subam as escadas. Perguntem no bar pelo "IT Meetup" caso não encontrem.
-
-Temos uma lista de discussão nos grupos do google, [https://groups.google.com/forum/#!forum/it-irlanda-br](https://groups.google.com/forum/#!forum/it-irlanda-br)
-
-Um grupo no slack [http://itindublin.slack.com/messages/general/](http://itindublin.slack.com/messages/general/)
-
-Veja aqui como contribuir com a [wiki](https://itindublin.github.io/como-contribuir-com-a-wiki)
-ou postar artigos no [blog](https://itindublin.github.io/como-publicar-um-artigo).
-
+* [Grupo do Google](https://groups.google.com/forum/#!forum/it-irlanda-br)
+* [Grupo no Slack](http://itindublin.slack.com/messages/general/)
+* [Site do Grupo](https://itindublin.github.io/)
+* [Wiki](https://itindublin.github.io/wiki)
 
 ***
 
-
-###Rodando o projeto localmente
+## <a name="repositorio-local"></a>Rodando o projeto localmente
 
 Se você é programador ou tem o minimo de conhecimento de Python siga
 as instruções abaixo para rodar o projeto na sua máquina.
 
-####Fork do Repositório
-
-- Faça um fork desse repositório
-- Faça um clone do seu fork
-
-
-    git clone  git@github.com:usuario/ITinDublin.github.io
+> Este projeto utiliza o Pelican. Assim, antes de mais nada é preciso ter instalado em sua máquina:
+> - Python 2.7
+> - VirtualEnv
 
 
-####Preparando o Ambiente
+1. Faça um fork deste repositório no seu github e em seguida, faça o clone dele em sua máquina:
 
-Criar o ambiente de uso do Pelican é muito simples, pra isso você vai precisar de:
+```sh
+$ git clone  git@github.com:usuario/ITinDublin.github.io
+```
 
-- Python 2.7;
-- VirtualEnv;
+2. Abra o terminal e crie um [virtualenv](https://virtualenv.readthedocs.io/en/latest/) para o  Python 2.7 (note que este passo não é obrigatório, mas é uma boa prática). O virtualenv pode ser criado em qualquer pasta, mas caso crie dentro da pasta do projeto pode usar o nome de _.venv_ que a pasta sera ignorada pelo git.
 
-Primeiro abra um terminal e crie um [virtualenv][https://virtualenv.readthedocs.io/en/latest/]
-para o Python 2.7 (note que este passo não é obrigatório, mas é uma boa prática):
-O virtualenv pode ser criado em qualquer pasta, mas
-caso crie dentro da pasta do projeto pode usar o nome de _.venv_ que a pasta sera ignorada pelo github
+### Instalando as dependências
 
-####Instalar dependências
+1. Entre na pasta do projeto:
+```sh
+$ cd ITinDublin.github.io
+```
 
-- Entrar na pasta do projeto
-- Com o virtualenv ativado instale as dependências.
+2. Com o virtualenv ativado instale as dependências:
+```sh
+$ pip install -r requirements.txt
+```
 
+### Rodando o Projeto
 
-    pip install -r requirements.txt
+Existem duas maneiras para executar o projeto:
 
-####Rodar Projeto
-
-Para rodar o projeto existem duas formas:
-
-######Utilizando os comandos _make_
-
-
-    make html
+#### Utilizando os comandos _make_
 
 O comando _make html_ irá gerar todo html do site e jogar na pasta _output_ .
+
+```sh
+$ make html
+```
+
 Agora vamos iniciar o servidor
 
+```language
+$ make serve
+```
 
-    make serve
-
-Pronto servidor iniciado, acesse http://localhost:8000/
+Agora basta acessar o seu iplocal na porta 8000: 
+> http://localhost:8000/
 
 A cada alteração nos arquivos do projeto é necessário rodar os comandos novamente.
 
-######Utilizando script
+#### Utilizando script
 
 Iniciando o servidor por esse script é possível testar o site localmente enquanto você realiza as modificações.
 
 Para utilizar o script para iniciar basta executar o comando:
 
+```sh
+$ ./develop_server.sh start
+```
 
-    ./develop_server.sh start
+Agora basta acessar o seu iplocal na porta 8000: 
+> http://localhost:8000/
 
+Para encerrar o servidor utilize o comando:
 
-Então basta visitar o endereço http://localhost:8000/
+```sh
+$ ./develop_server.sh stop
+```
 
-Para finalizar o servidor use:
-
-
-    ./develop_server.sh stop
-
-
-Após realizar as alterações e testes, faça o commit para o seu repositório local e depois nos envie um PULL Request.
-
-
-## Contributing, gostaria de contribuir?
-
-Veja como e Facil
-
-Nao possui conhecimento em desenvolvimento? ou github? sem problema apenas crie um issue clique no link e contribua [issue](https://github.com/ITinDublin/ITinDublin.github.io//issues/new?title=New%20Request:)
-
-voce pode adicionar fontes, imagens arquivo o que desejar.
+Após realizar as alterações e testes, faça o commit para o seu repositório local e depois nos envie um **Pull Request**.
 
 
-em fases de testes:
+## <a name="contruibuicao"></a>Gostaria de contribuir?
+
+Não possui conhecimento em desenvolvimento ou github? Sem problema, apenas crie um issue clicando [aqui](https://github.com/ITinDublin/ITinDublin.github.io//issues/new?title=New%20Request:) e contribua!
+
+Você pode adicionar *fontes*, *imagens* ou qualquer arquivo que desejar.
+
+Também é possível [contribuir com a nossa wiki](https://itindublin.github.io/como-contribuir-com-a-wiki)  ou [postar artigos no Blog](https://itindublin.github.io/como-publicar-um-artigo).
+
+
+
+## Em fase de Testes
 
 Grunt
 
@@ -134,5 +129,3 @@ Grunt Tasks
 "grunt-contrib-cssmin": "^1.0.2",
 
 ```
-
-
